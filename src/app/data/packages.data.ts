@@ -13,6 +13,7 @@ export interface FlightPackage
     image: string;
     imageAlt: string;
     bookingId: string;
+    isPrivate: boolean;
 }
 
 export const FLOW_ID = '922034';
@@ -35,7 +36,8 @@ export const PACKAGES: FlightPackage[] = [
         ],
         image: '/media/couple-dawn.webp',
         imageAlt: 'Pareja frente a los globos durante el amanecer',
-        bookingId: '448577'
+        bookingId: '448577',
+        isPrivate: false
     },
     {
         id: 'experiencia',
@@ -56,7 +58,8 @@ export const PACKAGES: FlightPackage[] = [
         ],
         image: '/media/woman-pyramids.webp',
         imageAlt: 'Pasajera observando las pirámides desde el globo',
-        bookingId: '448570'
+        bookingId: '448570',
+        isPrivate: false
     },
     {
         id: 'premium',
@@ -77,7 +80,8 @@ export const PACKAGES: FlightPackage[] = [
         ],
         image: '/media/hero-poster.webp',
         imageAlt: 'Globos de Magic Balloons sobre el valle de Teotihuacán',
-        bookingId: '734628'
+        bookingId: '734628',
+        isPrivate: false
     },
     {
         id: 'exclusivo',
@@ -96,7 +100,8 @@ export const PACKAGES: FlightPackage[] = [
         ],
         image: '/media/couple-embrace.webp',
         imageAlt: 'Pareja abrazada durante un vuelo privado',
-        bookingId: '448587'
+        bookingId: '448587',
+        isPrivate: true
     }
 ];
 

@@ -6,7 +6,30 @@ export const CONTACT = {
     whatsapp: '5215635362245',
     booking: 'https://fareharbor.com/embeds/book/magicballoonsmexico/?full-items=yes&language=es',
     reviews: 'https://www.tripadvisor.com.mx/Attraction_Review-g14989463-d26454966-Reviews-Magic_Balloons_Mexico.html',
-    address: 'Carretera Federal México-Tulancingo, San Martín Centro, 55850, Estado de México',
+    // From the booking box on the TripAdvisor page. The page header counts
+    // differently (155), so quote these two together or not at all.
+    rating: {
+        score: '4.9',
+        count: 337
+    },
+    // Guests only ever go to the balloonport; the office is administration.
+    // Maps links use the place's CID, which survives renames and URL changes.
+    locations: {
+        balloonport: {
+            name: 'Globopuerto',
+            hours: '4:00 a 9:00',
+            lat: 19.6923836,
+            lng: -98.8212231,
+            maps: 'https://maps.google.com/?cid=5011907918767075665'
+        },
+        office: {
+            name: 'Oficina',
+            hours: '9:00 a 15:00',
+            lat: 19.6906755,
+            lng: -98.8253779,
+            maps: 'https://maps.google.com/?cid=18096572574940490965'
+        }
+    },
     social: {
         facebook: 'https://www.facebook.com/magicballoonsmexico',
         instagram: 'https://www.instagram.com/magicballoonsmexico',

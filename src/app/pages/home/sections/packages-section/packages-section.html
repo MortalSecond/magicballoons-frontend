@@ -1,0 +1,41 @@
+<section class="packages" id="vuelos">
+    <div class="packages__titles">
+        <p class="eyebrow packages__eyebrow">Vuelos</p>
+        <h2 class="packages__title">Elige tu vuelo</h2>
+    </div>
+
+    <div class="packages__grid">
+        @for (item of packages; track item.id)
+        {
+            <article class="package" [class.package--private]="item.isPrivate">
+                <img class="package__image"
+                     [src]="item.image"
+                     [alt]="item.imageAlt"
+                     width="800"
+                     height="600"
+                     loading="lazy">
+
+                <div class="package__body">
+                    <div class="package__header">
+                        <h3 class="package__name">{{ item.name }}</h3>
+                        <p class="package__tagline">{{ item.tagline }}</p>
+                    </div>
+
+                    <p class="package__price">
+                        ${{ item.price | number }}
+                        <span class="package__unit">MXN {{ item.priceUnit }}</span>
+                    </p>
+
+                    <ul class="package__includes">
+                        @for (line of item.includes; track line)
+                        {
+                            <li class="includes__item">{{ line }}</li>
+                        }
+                    </ul>
+
+                    <a class="button package__button" [href]="item.url">Reservar</a>
+                </div>
+            </article>
+        }
+    </div>
+</section>

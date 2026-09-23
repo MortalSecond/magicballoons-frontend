@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Hero } from '../../sections/hero/hero';
+import { HeroSection } from './sections/hero-section/hero-section';
+import { PackagesSection } from './sections/packages-section/packages-section';
 
 @Component({
-    selector: 'mb-home',
-    imports: [Hero],
+    selector: 'app-home',
+    imports: [HeroSection, PackagesSection],
     templateUrl: './home.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })

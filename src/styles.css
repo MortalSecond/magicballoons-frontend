@@ -1,326 +1,217 @@
-/* Global styles: the paint ramp, the role tokens every component uses, and the
-   composable blocks. A component that needs a literal value means a token is
-   missing here. */
+/* Global styles. Only colours and fonts are variables; every size is written
+   where it is used. */
 
+:root{
+    /* Fonts */
+    --displayFont: 'Anton', Impact, 'Arial Narrow', sans-serif;
+    --textFont: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
 
-/* === RESET === */
+    /* Colors */
+    --red: #ff0202;
+    --redDark: #d10000;
+    --night: #0b0e1a;
+    --nightDeep: #05070f;
+    --cream: #fdfaf6;
+    --sand: #ded2c3;
+    --ink: #1b2136;
+    --inkMuted: #4f5768;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+    /* Hue shifts (to recolor black SVGs) */
+    --toWhite: invert(100%);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Animations */
+
+/* Shared keyframes live here because Angular renames any @keyframes declared
+   in a component stylesheet, so a component's copy can't be reused. */
+
+@keyframes rise{
+    from{
+        opacity: 0;
+        transform: translateY(2.5rem);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-body {
-  margin: 0;
-  background: var(--bg-page);
-  color: var(--text-body);
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+/* Slides up from below its parent's edge. The parent needs overflow: hidden,
+   otherwise nothing is hidden and it just moves. */
+@keyframes reveal{
+    from{
+        transform: translateY(105%);
+    }
+
+    to{
+        transform: translateY(0);
+    }
 }
 
-img,
-video,
-svg {
-  display: block;
-  max-width: 100%;
+/* Reset */
+
+*, *::before, *::after{
+    box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
+html{
+    scroll-behavior: smooth;
 }
 
-p {
-  margin: 0;
-  text-wrap: pretty;
+body{
+    margin: 0;
+
+    font-family: var(--textFont);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink);
+
+    background-color: var(--cream);
+    -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
+img, video, svg{
+    display: block;
+    max-width: 100%;
 }
 
-button {
-  font: inherit;
+button{
+    font: inherit;
+    cursor: pointer;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
+ul{
+    margin: 0;
+    padding: 0;
 
-/* === PAINT === */
-
-/* The ramp. Only the role block below may read these. Hue shifts with the
-   logo, so every brand value lives on these lines. */
-:root {
-  --ember-300: #ff8a5c;
-  --ember-500: #f24d17;
-  --ember-600: #d63d0c;
-  --ember-700: #a82d06;
-
-  --night-700: #1b2136;
-  --night-800: #141827;
-  --night-900: #0b0e1a;
-  --night-950: #05070f;
-
-  --sand-50: #fdfaf6;
-  --sand-100: #f6efe6;
-  --sand-300: #ded2c3;
-
-  --slate-400: #8b93a7;
-  --slate-600: #4f5768;
-
-  --white: #ffffff;
-  --verde-whatsapp: #25d366;
-  --verde-tripadvisor: #00aa6c;
+    list-style: none;
 }
 
-/* Roles. These are the only colour names the rest of the app uses. */
-:root {
-  --bg-page: #fdfaf6;
-  --bg-raised: #ffffff;
-  --bg-muted: #f6efe6;
-  --bg-deep: #0b0e1a;
-  --bg-deeper: #05070f;
+/* Global Tag Overrides */
 
-  --text-title: #0b0e1a;
-  --text-body: #1b2136;
-  --text-soft: #4f5768;
-  --text-faint: #8b93a7;
-  --text-on-deep: #ffffff;
-  --text-on-deep-soft: #ded2c3;
+h1, h2, h3, h4{
+    margin: 0;
 
-  --brand: #f24d17;
-  --brand-hover: #d63d0c;
-  --brand-soft: #ff8a5c;
-  --brand-wash: rgba(242, 77, 23, 0.1);
-
-  --line: rgba(11, 14, 26, 0.1);
-  --line-on-deep: rgba(255, 255, 255, 0.18);
-
-  --scrim: rgba(5, 7, 15, 0.55);
-  --scrim-soft: rgba(5, 7, 15, 0.3);
+    font-weight: 400;
+    line-height: 1.05;
+    text-wrap: balance;
 }
 
-
-/* === TYPE === */
-
-:root {
-  --font-display: "Inter Tight", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-
-  --text-sm: 0.875rem;
-  --text-base: 1.0625rem;
-  --text-lg: 1.25rem;
-  --text-xl: 1.5rem;
-  --text-2xl: 2rem;
-  --text-3xl: clamp(2rem, 4vw, 2.75rem);
-  --text-hero: clamp(2.75rem, 9vw, 6.5rem);
-
-  --tracking-wide: 0.18em;
+h1{
+    font-family: var(--displayFont);
+    font-size: 6.5rem;
+    text-transform: uppercase;
 }
 
-
-/* === SPACE AND SHAPE === */
-
-:root {
-  --gap-tight: 0.5rem;
-  --gap: 1rem;
-  --gap-wide: 1.5rem;
-  --gap-section: 3rem;
-
-  --pad-card: 1.5rem;
-  --pad-btn-y: 0.85rem;
-  --pad-btn-x: 1.75rem;
-  --pad-section-y: 6rem;
-  --pad-gutter: 1.25rem;
-
-  --width-page: 1180px;
-  --width-prose: 60ch;
-
-  --radius: 14px;
-  --radius-lg: 22px;
-  --radius-pill: 999px;
-  --border-w: 1px;
-
-  --shadow-card: 0 4px 24px rgba(11, 14, 26, 0.08);
-  --shadow-lift: 0 18px 44px rgba(11, 14, 26, 0.16);
-  --shadow-deep: 0 24px 60px rgba(5, 7, 15, 0.45);
+h2{
+    font-family: var(--displayFont);
+    font-size: 3.5rem;
+    text-transform: uppercase;
 }
 
+p{
+    margin: 0;
 
-/* === MOTION === */
-
-/* Durations and curves are tokens so a whole-page tempo change is one edit. */
-:root {
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-
-  --dur-fast: 180ms;
-  --dur: 320ms;
-  --dur-slow: 700ms;
-  --dur-scene: 1200ms;
+    text-wrap: pretty;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --dur-fast: 1ms;
-    --dur: 1ms;
-    --dur-slow: 1ms;
-    --dur-scene: 1ms;
-  }
+/* Shared Classes */
 
-  html {
-    scroll-behavior: auto;
-  }
+.eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
 
-  *,
-  *::before,
-  *::after {
-    animation-iteration-count: 1 !important;
-    transition-duration: 1ms !important;
-  }
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
 }
 
+.eyebrow::before{
+    content: '';
+    width: 2rem;
+    height: 2px;
 
-/* === BLOCKS === */
-
-.container {
-  width: 100%;
-  max-width: var(--width-page);
-  margin-inline: auto;
-  padding-inline: var(--pad-gutter);
+    background-color: currentColor;
 }
 
-.section {
-  padding-block: var(--pad-section-y);
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: white;
+
+    padding: 1rem 2.25rem;
+    border: solid 2px var(--red);
+    border-radius: 3rem;
+    background-color: var(--red);
+
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
-.section--muted {
-  background: var(--bg-muted);
+.button:hover{
+    border-color: var(--redDark);
+    background-color: var(--redDark);
+    transform: translateY(-2px);
 }
 
-.section--deep {
-  background: var(--bg-deep);
-  color: var(--text-on-deep);
+.button--outline{
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
 }
 
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
+.button--outline:hover{
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  gap: var(--gap);
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after{
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+    }
 }
 
-.grid {
-  display: grid;
-  gap: var(--gap-wide);
+/* ============================================================
+                GLOBAL MOBILE RESPONSIVE ADDITIONS
+   ============================================================ */
+
+@media (max-width: 768px){
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .button{
+        padding: 0.9rem 1.75rem;
+    }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  background: var(--bg-raised);
-  box-shadow: var(--shadow-card);
-}
-
-.label {
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--text-faint);
-}
-
-.prose {
-  max-width: var(--width-prose);
-  color: var(--text-soft);
-}
-
-
-/* === CONTROLS === */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-tight);
-  padding: var(--pad-btn-y) var(--pad-btn-x);
-  border: var(--border-w) solid var(--brand);
-  border-radius: var(--radius-pill);
-  background: var(--brand);
-  color: var(--white);
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background var(--dur-fast) var(--ease-out),
-    transform var(--dur-fast) var(--ease-out),
-    box-shadow var(--dur-fast) var(--ease-out);
-}
-
-.btn:hover {
-  background: var(--brand-hover);
-  border-color: var(--brand-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lift);
-}
-
-.btn--ghost {
-  border-color: var(--line);
-  background: transparent;
-  color: var(--text-title);
-}
-
-.btn--ghost:hover {
-  border-color: var(--brand);
-  background: var(--brand-wash);
-  color: var(--text-title);
-  box-shadow: none;
-}
-
-.btn--on-deep {
-  border-color: var(--line-on-deep);
-  background: transparent;
-  color: var(--text-on-deep);
-}
-
-.btn--on-deep:hover {
-  border-color: var(--white);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: none;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--gap-tight);
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-pill);
-  background: var(--brand-wash);
-  color: var(--brand);
-  font-size: var(--text-sm);
-  font-weight: 600;
+@media (max-width: 480px){
+    h1{
+        font-size: 3.25rem;
+    }
 }

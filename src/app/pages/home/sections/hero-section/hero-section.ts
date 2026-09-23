@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { CONTACT } from '../../data/contact.data';
+import { CONTACT } from '../../../../data/contact.data';
 
 @Component({
-    selector: 'mb-hero',
-    templateUrl: './hero.html',
-    styleUrl: './hero.css',
+    selector: 'app-hero-section',
+    templateUrl: './hero-section.html',
+    styleUrl: './hero-section.css',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Hero
+export class HeroSection
 {
     protected readonly contact = CONTACT;
 }
