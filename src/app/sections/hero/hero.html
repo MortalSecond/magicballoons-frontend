@@ -1,0 +1,19 @@
+<!-- The poster is the LCP element and is preloaded in index.html. Video comes
+     later, layered behind this image. -->
+<section class="hero">
+    <img class="hero__poster"
+         src="/media/hero-poster.webp"
+         alt="Globos de Magic Balloons sobre el valle de Teotihuacán al amanecer"
+         fetchpriority="high">
+
+    <div class="hero__scrim"></div>
+
+    <div class="container hero__content">
+        <p class="hero__eyebrow">Teotihuacán</p>
+        <h1 class="hero__title">La magia<br>de volar</h1>
+        <div class="row hero__actions">
+            <a class="btn" [href]="contact.booking">Reservar</a>
+            <a class="btn btn--on-deep" href="#vuelos">Ver vuelos</a>
+        </div>
+    </div>
+</section>

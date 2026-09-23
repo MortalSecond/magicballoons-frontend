@@ -1,0 +1,55 @@
+.hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 100svh;
+    padding-block-end: var(--gap-section);
+    overflow: hidden;
+    background: var(--bg-deeper);
+    color: var(--text-on-deep);
+}
+
+.hero__poster,
+.hero__scrim {
+    position: absolute;
+    inset: 0;
+}
+
+.hero__poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Darker at the bottom, where the title sits. */
+.hero__scrim {
+    background: linear-gradient(
+        to top,
+        var(--scrim) 0%,
+        var(--scrim-soft) 45%,
+        transparent 75%
+    );
+}
+
+.hero__content {
+    position: relative;
+}
+
+.hero__eyebrow {
+    margin-block-end: var(--gap);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--text-on-deep-soft);
+}
+
+.hero__title {
+    margin-block-end: var(--gap-wide);
+    font-size: var(--text-hero);
+    color: var(--text-on-deep);
+}
+
+.hero__actions {
+    flex-wrap: wrap;
+}

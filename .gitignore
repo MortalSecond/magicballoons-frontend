@@ -42,3 +42,8 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Raw media originals live in Drive, not in the repo
+/*.mp4
+/*.webm
+/drone.mp4
