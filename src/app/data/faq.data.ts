@@ -89,7 +89,7 @@ export const FAQ: FaqGroup[] = [
             {
                 id: 'arrival',
                 question: $localize`:@@faq.arrival.question:¿A qué hora debo llegar?`,
-                answer: $localize`:@@faq.arrival.answer:A las ${P.arrivalTime}:arrivalTime: a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay estacionamiento amplio a unos pasos de recepción.`
+                answer: $localize`:@@faq.arrival.answer:A las ${P.arrivalTime}:arrivalTime: a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay amplio estacionamiento a unos pasos de recepción.`
             },
             {
                 id: 'pickup',
@@ -104,7 +104,7 @@ export const FAQ: FaqGroup[] = [
             {
                 id: 'clothing',
                 question: $localize`:@@faq.clothing.question:¿Qué ropa llevo?`,
-                answer: $localize`:@@faq.clothing.answer:Ropa ligera y cómoda. Al amanecer hace fresco, pero junto al quemador hace mucho calor, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.`
+                answer: $localize`:@@faq.clothing.answer:Ropa ligera y cómoda. Los amaneceres en Teotihuacán son fríos, pero el calor del quemador de los globos puede ser abrumador, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.`
             },
             {
                 id: 'bags',

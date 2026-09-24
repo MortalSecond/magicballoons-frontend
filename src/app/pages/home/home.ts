@@ -5,11 +5,12 @@ import { ServicesSection } from './sections/services-section/services-section';
 import { JourneySection } from './sections/journey-section/journey-section';
 import { ReviewsSection } from './sections/reviews-section/reviews-section';
 import { FaqSection } from './sections/faq-section/faq-section';
+import { LocationSection } from './sections/location-section/location-section';
 import { Seo } from '../../shared/seo';
 
 @Component({
     selector: 'app-home',
-    imports: [HeroSection, PackagesSection, ServicesSection, JourneySection, ReviewsSection, FaqSection],
+    imports: [HeroSection, PackagesSection, ServicesSection, JourneySection, ReviewsSection, FaqSection, LocationSection],
     templateUrl: './home.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })

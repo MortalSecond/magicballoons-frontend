@@ -211,7 +211,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="faq.arrival.answer" datatype="html">
-        <source>A las <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay estacionamiento amplio a unos pasos de recepción.</source>
+        <source>A las <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay amplio estacionamiento a unos pasos de recepción.</source>
         <target>At <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. at our launch site in Teotihuacan; we confirm the exact time the night before. There is plenty of parking just steps from reception.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/faq.data.ts</context>
@@ -259,7 +259,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="faq.clothing.answer" datatype="html">
-        <source>Ropa ligera y cómoda. Al amanecer hace fresco, pero junto al quemador hace mucho calor, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
+        <source>Ropa ligera y cómoda. Los amaneceres en Teotihuacán son fríos, pero el calor del quemador de los globos puede ser abrumador, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
         <target>Light, comfortable clothes. It's cool at dawn, but it gets very warm next to the burner, so a heavy coat just gets in the way. Feel free to arrive bundled up and leave your jacket in our free lockers.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/faq.data.ts</context>
@@ -1119,7 +1119,7 @@
         <target>Fly in a hot air balloon over the pyramids of Teotihuacan. Shared and private flights, breakfast, a sunrise toast and your own flight certificate.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq.eyebrow" datatype="html">
@@ -1248,6 +1248,58 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/journey-section/journey-section.html</context>
           <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.eyebrow" datatype="html">
+        <source>Cómo llegar</source>
+        <target>Getting here</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.title" datatype="html">
+        <source>Te esperamos en Teotihuacán</source>
+        <target>See you in Teotihuacan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.balloonportText" datatype="html">
+        <source>Aquí despegan todos los vuelos. Llega a las <x id="INTERPOLATION" equiv-text="{{ arrivalTime }}"/> a.m.; te confirmamos la hora exacta la noche anterior. Hay amplio estacionamiento a unos pasos de recepción.</source>
+        <target>Every flight takes off from here. Arrive at <x id="INTERPOLATION" equiv-text="{{ arrivalTime }}"/> a.m.; we confirm the exact time the night before. There is plenty of parking just steps from reception.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.directions" datatype="html">
+        <source>Cómo llegar</source>
+        <target>Get directions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.openMaps" datatype="html">
+        <source>Ver en Google Maps</source>
+        <target>View on Google Maps</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.officeText" datatype="html">
+        <source>Horario de atención: <x id="INTERPOLATION" equiv-text="{{ office.hours }}"/>. Aquí se atienden trámites administrativos; los vuelos salen del globopuerto.</source>
+        <target>Open Monday to Sunday, <x id="INTERPOLATION" equiv-text="{{ office.hours }}"/>. This is where we handle administrative matters; flights leave from the launch site.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">21,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="packages.eyebrow" datatype="html">

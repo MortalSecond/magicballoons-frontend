@@ -1,0 +1,40 @@
+<section class="location" id="ubicacion">
+    <div class="location__inner">
+        <div class="location__info">
+            <div class="location__titles">
+                <p class="eyebrow location__eyebrow" i18n="@@location.eyebrow">Cómo llegar</p>
+                <h2 class="location__title" i18n="@@location.title">Te esperamos en Teotihuacán</h2>
+            </div>
+
+            <article class="place place--primary">
+                <h3 class="place__name">{{ balloonport.name }}</h3>
+                <p class="place__text" i18n="@@location.balloonportText">Aquí despegan todos los vuelos. Llega a las {{ arrivalTime }} a.m.; te confirmamos la hora exacta la noche anterior. Hay amplio estacionamiento a unos pasos de recepción.</p>
+
+                <div class="place__links">
+                    <a class="button" [href]="directionsUrl" target="_blank" rel="noopener" i18n="@@location.directions">Cómo llegar</a>
+                    <a class="button button--outline" [href]="balloonport.maps" target="_blank" rel="noopener" i18n="@@location.openMaps">Ver en Google Maps</a>
+                </div>
+            </article>
+
+            <article class="place">
+                <h3 class="place__name">{{ office.name }}</h3>
+                <p class="place__text" i18n="@@location.officeText">Horario de atención: lunes a domingo, {{ office.hours }}. Aquí se atienden trámites administrativos; los vuelos salen del globopuerto.</p>
+
+                <a class="place__link" [href]="office.maps" target="_blank" rel="noopener" i18n="@@location.openMaps">Ver en Google Maps</a>
+            </article>
+        </div>
+
+        <!-- Leaflet only runs in a browser, and only once this is near the
+             screen; prerendering ships the placeholder, sized like the map. -->
+        <div class="location__map">
+            @defer (on viewport)
+            {
+                <app-location-map [points]="points" />
+            }
+            @placeholder
+            {
+                <div class="location__placeholder"></div>
+            }
+        </div>
+    </div>
+</section>

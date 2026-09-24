@@ -1,6 +1,9 @@
 /* Global styles. Only colours and fonts are variables; every size is written
    where it is used. */
 
+/* Leaflet's own styles for the OpenStreetMap in the location section. */
+@import 'leaflet/dist/leaflet.css';
+
 :root{
     /* Fonts */
     --displayFont: 'Anton', Impact, 'Arial Narrow', sans-serif;

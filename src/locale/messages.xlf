@@ -227,7 +227,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="faq.clothing.answer" datatype="html">
-        <source>Ropa ligera y cómoda. Los amaneceres en Teotihuacan son frios, pero el calor del quemador de los globos puede ser abrumador, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
+        <source>Ropa ligera y cómoda. Los amaneceres en Teotihuacán son fríos, pero el calor del quemador de los globos puede ser abrumador, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/faq.data.ts</context>
           <context context-type="linenumber">107</context>
@@ -979,7 +979,7 @@
         <source>Vuela en globo aerostático sobre las pirámides de Teotihuacán. Vuelos compartidos y privados, desayuno, brindis y certificado de vuelo.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq.eyebrow" datatype="html">
@@ -1092,6 +1092,52 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/journey-section/journey-section.html</context>
           <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.eyebrow" datatype="html">
+        <source>Cómo llegar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.title" datatype="html">
+        <source>Te esperamos en Teotihuacán</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.balloonportText" datatype="html">
+        <source>Aquí despegan todos los vuelos. Llega a las <x id="INTERPOLATION" equiv-text="{{ arrivalTime }}"/> a.m.; te confirmamos la hora exacta la noche anterior. Hay amplio estacionamiento a unos pasos de recepción.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.directions" datatype="html">
+        <source>Cómo llegar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.openMaps" datatype="html">
+        <source>Ver en Google Maps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location.officeText" datatype="html">
+        <source>Horario de atención: lunes a domingo, <x id="INTERPOLATION" equiv-text="{{ office.hours }}"/>. Aquí se atienden trámites administrativos; los vuelos salen del globopuerto.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>
+          <context context-type="linenumber">21,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="packages.eyebrow" datatype="html">
