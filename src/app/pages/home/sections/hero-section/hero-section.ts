@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CONTACT } from '../../../../data/contact.data';
+import { srcset } from '../../../../data/media';
 
 @Component({
     selector: 'app-hero-section',
@@ -10,4 +11,5 @@ import { CONTACT } from '../../../../data/contact.data';
 export class HeroSection
 {
     protected readonly contact = CONTACT;
+    protected readonly posterSrcset = srcset('/media/hero-poster.webp');
 }

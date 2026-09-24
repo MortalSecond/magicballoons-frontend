@@ -1,7 +1,12 @@
-<!-- The poster is the LCP element and is preloaded in index.html. -->
+<!-- The poster is the LCP image: fetched first thanks to fetchpriority, at
+     the smallest width that fills the screen. -->
 <section class="hero" id="inicio">
     <img class="hero__poster"
          src="/media/hero-poster.webp"
+         [attr.srcset]="posterSrcset"
+         sizes="100vw"
+         width="1920"
+         height="1080"
          alt="Globos de Magic Balloons sobre el valle de Teotihuacán al amanecer"
          i18n-alt="@@hero.posterAlt"
          fetchpriority="high">

@@ -156,8 +156,8 @@
 }
 
 .tag--safety{
-    color: var(--red);
-    border-color: var(--red);
+    color: var(--redDark);
+    border-color: var(--redDark);
 }
 
 /* Scroll-driven: the rail fills so its tip stays on the middle of the screen,
@@ -182,9 +182,11 @@
     }
 }
 
-@keyframes body-light{
+/* Only the title dims: it is large text, where 45% still passes contrast. The
+   paragraphs stay fully readable while the step is still below the line. */
+@keyframes title-light{
     from{
-        opacity: 0.35;
+        opacity: 0.45;
     }
 }
 
@@ -202,8 +204,8 @@
             animation-range: cover 50vh cover calc(50vh + 1.5rem);
         }
 
-        .step__body{
-            animation: body-light linear both;
+        .step__title{
+            animation: title-light linear both;
             animation-timeline: view();
             animation-range: cover calc(50vh - 6rem) cover 50vh;
         }

@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects: old WordPress URLs that search engines and other
+# sites still link to, pointed at their new equivalents.
+/politicas-y-terminos-de-condiciones-en-el-servicio/   /politicas/   301
+/politicas-y-terminos-de-condiciones-en-el-servicio    /politicas/   301

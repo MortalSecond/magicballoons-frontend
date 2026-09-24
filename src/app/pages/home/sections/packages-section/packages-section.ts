@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { PACKAGES, bookingUrl } from '../../../../data/packages.data';
+import { srcset } from '../../../../data/media';
 
 @Component({
     imports: [DecimalPipe],
@@ -11,5 +12,5 @@ import { PACKAGES, bookingUrl } from '../../../../data/packages.data';
 export class PackagesSection
 {
     // Resolved once, so the template doesn't rebuild URLs on every check.
-    protected readonly packages = PACKAGES.map(item => ({ ...item, url: bookingUrl(item) }));
+    protected readonly packages = PACKAGES.map(item => ({ ...item, url: bookingUrl(item), srcset: srcset(item.image) }));
 }

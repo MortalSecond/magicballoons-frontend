@@ -27,18 +27,18 @@
     <div class="services__stage">
         @for (service of services; track service.id; let index = $index)
         {
-            <article class="service"
-                     role="tabpanel"
-                     [id]="'panel-' + service.id"
-                     [attr.aria-labelledby]="'tab-' + service.id"
-                     [attr.inert]="index === active() ? null : ''"
-                     [class.service--active]="index === active()">
+            <div class="service"
+                 role="tabpanel"
+                 [id]="'panel-' + service.id"
+                 [attr.aria-labelledby]="'tab-' + service.id"
+                 [attr.inert]="index === active() ? null : ''"
+                 [class.service--active]="index === active()">
 
                 <div class="service__gallery">
                     @for (image of service.gallery; track $index)
                     {
                         <button class="gallery__item" type="button" (click)="expand(image)">
-                            <img class="gallery__image" [src]="image.src" [alt]="image.alt" width="400" height="400" loading="lazy">
+                            <img class="gallery__image" [src]="image.src" [attr.srcset]="image.srcset" sizes="(max-width: 1000px) 33vw, 13rem" [alt]="image.alt" width="400" height="400" loading="lazy">
                         </button>
                     }
                 </div>
@@ -72,7 +72,7 @@
                         Escríbenos por WhatsApp
                     </a>
                 </div>
-            </article>
+            </div>
         }
     </div>
 

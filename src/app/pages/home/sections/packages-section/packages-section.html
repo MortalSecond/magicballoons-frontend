@@ -10,6 +10,8 @@
             <article class="package" [class.package--private]="item.isPrivate">
                 <img class="package__image"
                      [src]="item.image"
+                     [attr.srcset]="item.srcset"
+                     sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 18rem"
                      [alt]="item.imageAlt"
                      width="800"
                      height="600"

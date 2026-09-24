@@ -1,6 +1,13 @@
 /* Global styles. Only colours and fonts are variables; every size is written
    where it is used. */
 
+/* Fonts are bundled and served from our own domain: no request to Google before
+   text can render. Latin covers Spanish accents, ñ, ¿ and ¡. */
+@import '@fontsource/anton/latin-400.css';
+@import '@fontsource/montserrat/latin-400.css';
+@import '@fontsource/montserrat/latin-500.css';
+@import '@fontsource/montserrat/latin-700.css';
+
 /* Leaflet's own styles for the OpenStreetMap in the location section. */
 @import 'leaflet/dist/leaflet.css';
 
@@ -12,6 +19,7 @@
     /* Colors */
     --red: #ff0202;
     --redDark: #d10000;
+    --redDeep: #a80000;
     --night: #0b0e1a;
     --nightDeep: #05070f;
     --cream: #fdfaf6;
@@ -160,16 +168,17 @@ p{
     color: white;
 
     padding: 1rem 2.25rem;
-    border: solid 2px var(--red);
+    /* The brand red is too light behind white text (4:1); this passes AA at 5.6:1. */
+    border: solid 2px var(--redDark);
     border-radius: 3rem;
-    background-color: var(--red);
+    background-color: var(--redDark);
 
     transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .button:hover{
-    border-color: var(--redDark);
-    background-color: var(--redDark);
+    border-color: var(--redDeep);
+    background-color: var(--redDeep);
     transform: translateY(-2px);
 }
 

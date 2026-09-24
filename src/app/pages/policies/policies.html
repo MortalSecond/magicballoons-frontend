@@ -11,7 +11,7 @@
     <nav class="policies__index" aria-label="Contenido" i18n-aria-label="@@policies.indexLabel">
         @for (section of sections; track section.id)
         {
-            <a class="index__link" [href]="'politicas#' + section.id">{{ section.title }}</a>
+            <a class="index__link" [href]="'politicas/#' + section.id">{{ section.title }}</a>
         }
     </nav>
 

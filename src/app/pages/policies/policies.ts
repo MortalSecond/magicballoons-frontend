@@ -15,6 +15,11 @@ export class Policies
 
     constructor()
     {
-        inject(Seo).apply($localize`:@@policies.description:Políticas de Magic Balloons: reservas, anticipo, formas de pago, cargo por peso, cambios, cancelaciones, clima y seguridad.`, 'politicas');
+        inject(Seo).apply({
+            title: $localize`:@@policies.pageTitle:Políticas de vuelo | Magic Balloons`,
+            description: $localize`:@@policies.description:Políticas de Magic Balloons: reservas, anticipo, formas de pago, cargo por peso, cambios, cancelaciones, clima y seguridad.`,
+            // Trailing slash: static hosts serve politicas/index.html at /politicas/.
+            path: 'politicas/'
+        });
     }
 }

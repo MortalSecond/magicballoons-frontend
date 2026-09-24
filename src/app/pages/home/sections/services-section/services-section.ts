@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { SERVICES, ServiceImage, whatsappUrl } from '../../../../data/services.data';
 import { ImageViewer } from '../../../../shared/components/image-viewer/image-viewer';
+import { srcset } from '../../../../data/media';
 
 @Component({
     imports: [ImageViewer],
@@ -10,7 +11,11 @@ import { ImageViewer } from '../../../../shared/components/image-viewer/image-vi
 })
 export class ServicesSection
 {
-    protected readonly services = SERVICES.map(service => ({ ...service, url: whatsappUrl(service.phone, service.message) }));
+    protected readonly services = SERVICES.map(service => ({
+        ...service,
+        url: whatsappUrl(service.phone, service.message),
+        gallery: service.gallery.map(image => ({ ...image, srcset: srcset(image.src) }))
+    }));
 
     // === STATE ===
 

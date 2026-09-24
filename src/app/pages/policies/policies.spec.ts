@@ -42,6 +42,6 @@ describe('Policies', () =>
         const canonical = TestBed.inject(DOCUMENT).head.querySelector('link[rel="canonical"]')?.getAttribute('href');
 
         expect(canonical?.startsWith(SITE_URL)).toBe(true);
-        expect(canonical?.endsWith('/politicas')).toBe(true);
+        expect(canonical?.endsWith('/politicas/')).toBe(true);
     });
 });
