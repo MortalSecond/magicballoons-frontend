@@ -14,7 +14,8 @@ export class Navbar
     protected readonly links = [
         { href: '#vuelos', label: $localize`:@@navbar.flights:Vuelos` },
         { href: '#servicios', label: $localize`:@@navbar.services:Servicios` },
-        { href: '#experiencia', label: $localize`:@@navbar.journey:Tu día` }
+        { href: '#experiencia', label: $localize`:@@navbar.journey:Tu día` },
+        { href: '#opiniones', label: $localize`:@@navbar.reviews:Opiniones` }
     ];
     protected readonly openLabel = $localize`:@@navbar.open:Abrir menú`;
     protected readonly closeLabel = $localize`:@@navbar.close:Cerrar menú`;

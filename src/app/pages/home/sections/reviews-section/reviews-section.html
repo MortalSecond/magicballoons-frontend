@@ -1,0 +1,38 @@
+<section class="reviews" id="opiniones">
+    <div class="reviews__header">
+        <div class="reviews__titles">
+            <p class="eyebrow reviews__eyebrow" i18n="@@reviews.eyebrow">Opiniones</p>
+            <h2 class="reviews__title" i18n="@@reviews.title">Lo que dicen nuestros pasajeros</h2>
+        </div>
+
+        <a class="reviews__summary" [href]="contact.reviews" target="_blank" rel="noopener">
+            <strong class="summary__score">{{ contact.rating.score }}</strong>
+            <span class="summary__detail" i18n="@@reviews.summary">{{ contact.rating.count }} opiniones en TripAdvisor</span>
+        </a>
+    </div>
+
+    <div class="reviews__grid">
+        @for (review of reviews; track review.author)
+        {
+            <figure class="review">
+                <span class="review__bubbles" role="img" [attr.aria-label]="review.rating + ' / 5'">
+                    @for (bubble of bubbles; track bubble)
+                    {
+                        <span class="bubble" [class.bubble--filled]="bubble <= review.rating"></span>
+                    }
+                </span>
+
+                <blockquote class="review__quote">
+                    <p class="review__title">{{ review.title }}</p>
+                    <p class="review__text">{{ review.text }}</p>
+                </blockquote>
+
+                <figcaption class="review__author">{{ review.author }}</figcaption>
+            </figure>
+        }
+    </div>
+
+    <a class="button button--outline reviews__more" [href]="contact.reviews" target="_blank" rel="noopener" i18n="@@reviews.more">
+        Ver todas en TripAdvisor
+    </a>
+</section>
