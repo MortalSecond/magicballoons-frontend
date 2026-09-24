@@ -128,7 +128,23 @@
 }
 
 .footer__copyright{
+    margin-right: 1.5rem;
+
     font-size: 0.8rem;
+}
+
+.footer__legal{
+    margin-right: auto;
+
+    font-size: 0.8rem;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+
+    transition: color 0.2s;
+}
+
+.footer__legal:hover{
+    color: white;
 }
 
 .footer__languages{

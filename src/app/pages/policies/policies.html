@@ -1,0 +1,29 @@
+<!-- Dark band first, so the transparent navbar stays readable at the top. -->
+<header class="policies__header">
+    <div class="policies__heading">
+        <p class="eyebrow policies__eyebrow">Magic Balloons</p>
+        <h1 class="policies__title" i18n="@@policies.title">Políticas de vuelo</h1>
+        <p class="policies__updated">{{ updated }}</p>
+    </div>
+</header>
+
+<main class="policies">
+    <nav class="policies__index" aria-label="Contenido" i18n-aria-label="@@policies.indexLabel">
+        @for (section of sections; track section.id)
+        {
+            <a class="index__link" [href]="'politicas#' + section.id">{{ section.title }}</a>
+        }
+    </nav>
+
+    @for (section of sections; track section.id)
+    {
+        <section class="policy" [id]="section.id">
+            <h2 class="policy__title">{{ section.title }}</h2>
+
+            @for (paragraph of section.paragraphs; track $index)
+            {
+                <p class="policy__text">{{ paragraph }}</p>
+            }
+        </section>
+    }
+</main>

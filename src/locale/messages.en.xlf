@@ -10,6 +10,14 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="policies.pageTitle" datatype="html">
+        <source>Políticas de vuelo | Magic Balloons</source>
+        <target>Flight policies | Magic Balloons</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="site.fareharborLanguage" datatype="html">
         <source>es</source>
         <target>en</target>
@@ -770,6 +778,246 @@
           <context context-type="linenumber">122</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="policies.updated" datatype="html">
+        <source>Última actualización: septiembre de 2026</source>
+        <target>Last updated: September 2026</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.booking.title" datatype="html">
+        <source>Reservas y anticipo</source>
+        <target>Bookings and deposit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.booking.p1" datatype="html">
+        <source>Puedes reservar en línea o por WhatsApp con uno de nuestros asesores. Todos los precios están en pesos mexicanos (MXN).</source>
+        <target>You can book online or on WhatsApp with one of our sales advisors. All prices are in Mexican pesos (MXN).</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.booking.p2" datatype="html">
+        <source>Al reservar se paga un anticipo de $<x id="deposit" equiv-text="P.depositPerPassenger"/> MXN por pasajero, que aparta tu lugar en el globo. Cada vuelo se planea la noche anterior según los pasajeros confirmados. El resto se paga el día del vuelo en recepción.</source>
+        <target>A deposit of $<x id="deposit" equiv-text="P.depositPerPassenger"/> MXN per passenger is paid when booking, which holds your place in the balloon. Each flight is planned the night before around the confirmed passengers. The balance is paid at reception on the day of your flight.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.payment.title" datatype="html">
+        <source>Formas de pago</source>
+        <target>Payment methods</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.payment.p1" datatype="html">
+        <source>En recepción aceptamos efectivo, transferencia bancaria y tarjeta de débito o crédito. Los pagos con tarjeta tienen un cargo adicional de <x id="cardFee" equiv-text="P.cardFeePercent"/>% por el uso de la terminal.</source>
+        <target>At reception we accept cash, bank transfers and debit or credit cards. Card payments carry an additional <x id="cardFee" equiv-text="P.cardFeePercent"/>% terminal fee.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.payment.p2" datatype="html">
+        <source>Al reservar también puedes pagar con PayPal, con un cargo adicional de <x id="paypalFee" equiv-text="P.paypalFeePercent"/>%. Aceptamos dólares estadounidenses a un tipo de cambio fijo de $<x id="rate" equiv-text="P.pesosPerDollar"/> MXN por dólar.</source>
+        <target>When booking, you can also pay by PayPal, with an additional <x id="paypalFee" equiv-text="P.paypalFeePercent"/>% fee. We accept US dollars at a fixed rate of $<x id="rate" equiv-text="P.pesosPerDollar"/> MXN per dollar.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weight.title" datatype="html">
+        <source>Pesaje y cargo por peso</source>
+        <target>Weigh-in and weight surcharge</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weight.p1" datatype="html">
+        <source>Todos los pasajeros se pesan en recepción antes de volar. Es obligatorio: el piloto distribuye a los pasajeros en la canasta según su peso para mantener el globo equilibrado.</source>
+        <target>Every passenger is weighed at reception before flying. This is required: the pilot places passengers in the basket by weight to keep the balloon balanced.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weight.p2" datatype="html">
+        <source>A partir de <x id="fromKg" equiv-text="P.surchargeFromKg"/> kg se cobra un cargo de $<x id="perKg" equiv-text="P.surchargePerKg"/> MXN por cada kilo adicional. Si pesas más de <x id="warningKg" equiv-text="P.weightWarningKg"/> kg, consúltanos antes de reservar.</source>
+        <target>From <x id="fromKg" equiv-text="P.surchargeFromKg"/> kg, a charge of $<x id="perKg" equiv-text="P.surchargePerKg"/> MXN applies for each additional kilo. If you weigh more than <x id="warningKg" equiv-text="P.weightWarningKg"/> kg, please check with us before booking.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.children.title" datatype="html">
+        <source>Niños</source>
+        <target>Children</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.children.p1" datatype="html">
+        <source>Los niños pagan la tarifa completa, ya que ocupan su propio lugar en la canasta, en el transporte y en el desayuno. La edad mínima para volar es de <x id="minimumAge" equiv-text="P.minimumAge"/> años; los menores de esa edad no suben al globo, pero sí disfrutan del resto de la experiencia.</source>
+        <target>Children pay the full fare, since they take up their own place in the basket, the transport and at breakfast. The minimum age to fly is <x id="minimumAge" equiv-text="P.minimumAge"/>; younger children don't board the balloon, but they can enjoy the rest of the experience.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.changes.title" datatype="html">
+        <source>Cambios, cancelaciones e inasistencias</source>
+        <target>Changes, cancellations and no-shows</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.changes.p1" datatype="html">
+        <source>Puedes cambiar la fecha de tu vuelo sin costo si nos avisas por WhatsApp con al menos 48 horas de anticipación. La nueva fecha debe ser dentro de los tres meses siguientes.</source>
+        <target>You can change the date of your flight free of charge if you let us know on WhatsApp at least 48 hours in advance. The new date must fall within the following three months.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.changes.p2" datatype="html">
+        <source>Las cancelaciones hechas entre 48 y 12 horas antes del vuelo tienen un cargo del 30% del total. Con menos de 12 horas de aviso, el anticipo no es reembolsable.</source>
+        <target>Cancellations made between 48 and 12 hours before the flight are charged 30% of the total. With less than 12 hours' notice, the deposit is non-refundable.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.changes.p3" datatype="html">
+        <source>El día del vuelo solo pagan los pasajeros que vuelan. El anticipo de un pasajero que no se presenta no es reembolsable, ya que su lugar estaba apartado en el plan de vuelo.</source>
+        <target>On flight day, only passengers who fly pay. The deposit of a passenger who doesn't show up is non-refundable, since their seat was set aside in the flight plan.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weather.title" datatype="html">
+        <source>Clima y seguridad operacional</source>
+        <target>Weather and operational safety</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weather.p1" datatype="html">
+        <source>La decisión de volar la toman el piloto y la dirección operativa cada mañana, siempre con la seguridad como prioridad. Si otras empresas deciden volar y nosotros no, prevalece nuestro criterio de seguridad.</source>
+        <target>The decision to fly is made each morning by the pilot and our operations team, always putting safety first. If other companies decide to fly and we do not, our safety judgment prevails.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weather.p2" datatype="html">
+        <source>Si el viento, la lluvia, una tormenta eléctrica o la neblina impiden volar, reprogramamos tu vuelo sin costo y tu anticipo se conserva para la nueva fecha.</source>
+        <target>If wind, rain, a thunderstorm or fog make flying unsafe, we reschedule your flight at no cost and your deposit carries over to the new date.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.weather.p3" datatype="html">
+        <source>El vuelo dura alrededor de <x id="minutes" equiv-text="P.flightMinutes"/> minutos. La ruta y el lugar de aterrizaje dependen del viento y de las zonas seguras disponibles, a criterio del piloto.</source>
+        <target>The flight lasts about <x id="minutes" equiv-text="P.flightMinutes"/> minutes. The route and landing spot depend on the wind and the safe areas available, at the pilot's discretion.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.health.title" datatype="html">
+        <source>Restricciones de salud</source>
+        <target>Health restrictions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.health.p1" datatype="html">
+        <source>Por seguridad no pueden volar mujeres embarazadas, personas con enfermedades del corazón o cirugías recientes, personas con problemas de columna, usuarios de silla de ruedas, ni personas bajo los efectos del alcohol u otras sustancias.</source>
+        <target>For safety reasons, pregnant women, people with heart conditions or recent surgery, people with spinal problems, wheelchair users and anyone under the influence of alcohol or other substances cannot fly.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.belongings.title" datatype="html">
+        <source>Pertenencias</source>
+        <target>Belongings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.belongings.p1" datatype="html">
+        <source>Solo se permite subir al globo tu celular, una cámara y objetos pequeños. No se permiten mochilas ni bolsas de ningún tamaño, ni armas de ningún tipo. Contamos con casilleros gratuitos para todo lo demás.</source>
+        <target>Only your phone, a camera and small items may be taken on board. Backpacks and bags of any size are not allowed, nor are weapons of any kind. Free lockers are available for everything else.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.media.title" datatype="html">
+        <source>Fotografía y video</source>
+        <target>Photography and video</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.media.p1" datatype="html">
+        <source>Durante la experiencia, nuestros fotógrafos y drones pueden captar fotos y video. Al participar, autorizas el uso de estas imágenes con fines promocionales de Magic Balloons, siempre con respeto a tu dignidad y privacidad.</source>
+        <target>During the experience, our photographers and drones may capture photos and video. By taking part, you authorize Magic Balloons to use these images for promotional purposes, always respecting your dignity and privacy.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.media.p2" datatype="html">
+        <source>Las fotos y videos se venden por separado y no forman parte de los paquetes de vuelo.</source>
+        <target>Photos and videos are sold separately and are not part of the flight packages.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.privacy.title" datatype="html">
+        <source>Privacidad</source>
+        <target>Privacy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.privacy.p1" datatype="html">
+        <source>Recabamos los datos necesarios para operar tu vuelo con seguridad, como tu nombre, teléfono, correo, edad y peso. Los usamos para gestionar tu reserva, planear el vuelo y cumplir con la normativa aplicable.</source>
+        <target>We collect the information needed to operate your flight safely, such as your name, phone number, email, age and weight. We use it to manage your booking, plan the flight and comply with applicable regulations.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.privacy.p2" datatype="html">
+        <source>No compartimos tus datos con terceros, salvo por mandato legal. Puedes solicitar que los eliminemos escribiéndonos por WhatsApp.</source>
+        <target>We do not share your information with third parties, except when required by law. You can ask us to delete it by messaging us on WhatsApp.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/policies.data.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="services.flights.name" datatype="html">
         <source>Vuelos en globo</source>
         <target>Balloon flights</target>
@@ -1510,6 +1758,30 @@
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="policies.title" datatype="html">
+        <source>Políticas de vuelo</source>
+        <target>Flight policies</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/policies/policies.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.indexLabel" datatype="html">
+        <source>Contenido</source>
+        <target>Contents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/policies/policies.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policies.description" datatype="html">
+        <source>Políticas de Magic Balloons: reservas, anticipo, formas de pago, cargo por peso, cambios, cancelaciones, clima y seguridad.</source>
+        <target>Magic Balloons policies: bookings, deposit, payment methods, weight surcharge, changes, cancellations, weather and safety.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/policies/policies.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="footer.tagline" datatype="html">
         <source>Vuelos en globo al amanecer sobre Teotihuacán.</source>
         <target>Sunrise hot air balloon flights over Teotihuacan.</target>
@@ -1564,6 +1836,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
           <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.policies" datatype="html">
+        <source>Políticas de vuelo</source>
+        <target>Flight policies</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">48,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.whatsappMessage" datatype="html">
