@@ -1,11 +1,11 @@
 <section class="services" id="servicios">
     <div class="services__header">
         <div class="services__titles">
-            <p class="eyebrow services__eyebrow">Más que vuelos</p>
-            <h2 class="services__title">Nuestros servicios</h2>
+            <p class="eyebrow services__eyebrow" i18n="@@services.eyebrow">Más que vuelos</p>
+            <h2 class="services__title" i18n="@@services.title">Nuestros servicios</h2>
         </div>
 
-        <div class="services__tabs" role="tablist" aria-label="Servicios">
+        <div class="services__tabs" role="tablist" aria-label="Servicios" i18n-aria-label="@@services.tabsLabel">
             @for (service of services; track service.id; let index = $index)
             {
                 <button class="tabs__tab"
@@ -68,7 +68,7 @@
                         }
                     </ul>
 
-                    <a class="button service__button" [href]="service.url" target="_blank" rel="noopener">
+                    <a class="button service__button" [href]="service.url" target="_blank" rel="noopener" i18n="@@services.whatsapp">
                         Escríbenos por WhatsApp
                     </a>
                 </div>
@@ -77,9 +77,9 @@
     </div>
 
     <div class="services__controls">
-        <button class="controls__arrow" type="button" aria-label="Servicio anterior" (click)="step(-1)">←</button>
+        <button class="controls__arrow" type="button" aria-label="Servicio anterior" i18n-aria-label="@@services.previous" (click)="step(-1)">←</button>
         <span class="controls__count">{{ active() + 1 }} / {{ services.length }}</span>
-        <button class="controls__arrow" type="button" aria-label="Siguiente servicio" (click)="step(1)">→</button>
+        <button class="controls__arrow" type="button" aria-label="Siguiente servicio" i18n-aria-label="@@services.next" (click)="step(1)">→</button>
     </div>
 
     <app-image-viewer [image]="expanded()" (closed)="expanded.set(null)" />

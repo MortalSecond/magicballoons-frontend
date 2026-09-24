@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { HeroSection } from './sections/hero-section/hero-section';
 import { PackagesSection } from './sections/packages-section/packages-section';
 import { ServicesSection } from './sections/services-section/services-section';
 import { JourneySection } from './sections/journey-section/journey-section';
+import { Seo } from '../../shared/seo';
 
 @Component({
     selector: 'app-home',
@@ -12,4 +13,8 @@ import { JourneySection } from './sections/journey-section/journey-section';
 })
 export class Home
 {
+    constructor()
+    {
+        inject(Seo).apply($localize`:@@home.description:Vuela en globo aerostático sobre las pirámides de Teotihuacán. Vuelos compartidos y privados, desayuno, brindis y certificado de vuelo.`);
+    }
 }

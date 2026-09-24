@@ -1,7 +1,7 @@
 <section class="packages" id="vuelos">
     <div class="packages__titles">
-        <p class="eyebrow packages__eyebrow">Vuelos</p>
-        <h2 class="packages__title">Elige tu vuelo</h2>
+        <p class="eyebrow packages__eyebrow" i18n="@@packages.eyebrow">Vuelos</p>
+        <h2 class="packages__title" i18n="@@packages.title">Elige tu vuelo</h2>
     </div>
 
     <div class="packages__grid">
@@ -33,7 +33,7 @@
                         }
                     </ul>
 
-                    <a class="button package__button" [href]="item.url">Reservar</a>
+                    <a class="button package__button" [href]="item.url" i18n="@@packages.book">Reservar</a>
                 </div>
             </article>
         }

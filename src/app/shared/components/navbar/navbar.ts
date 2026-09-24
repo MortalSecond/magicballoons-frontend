@@ -1,5 +1,6 @@
-import { Component, DestroyRef, afterNextRender, inject, signal } from '@angular/core';
+import { Component, DestroyRef, LOCALE_ID, afterNextRender, inject, signal } from '@angular/core';
 import { CONTACT } from '../../../data/contact.data';
+import { LANGUAGES, languageFor } from '../../../data/site.data';
 
 @Component({
     imports: [],
@@ -11,10 +12,17 @@ export class Navbar
 {
     protected readonly contact = CONTACT;
     protected readonly links = [
-        { href: '/#vuelos', label: 'Vuelos' },
-        { href: '/#servicios', label: 'Servicios' },
-        { href: '/#experiencia', label: 'Tu día' }
+        { href: '#vuelos', label: $localize`:@@navbar.flights:Vuelos` },
+        { href: '#servicios', label: $localize`:@@navbar.services:Servicios` },
+        { href: '#experiencia', label: $localize`:@@navbar.journey:Tu día` }
     ];
+    protected readonly openLabel = $localize`:@@navbar.open:Abrir menú`;
+    protected readonly closeLabel = $localize`:@@navbar.close:Cerrar menú`;
+
+    // Plain links to each language's root: a language is a separate build, so
+    // switching is a page load by design.
+    private readonly current = languageFor(inject(LOCALE_ID));
+    protected readonly languages = LANGUAGES.map(language => ({ ...language, isCurrent: language === this.current }));
 
     // === STATE ===
 

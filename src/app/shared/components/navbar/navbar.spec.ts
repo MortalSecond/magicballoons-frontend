@@ -22,7 +22,7 @@ describe('Navbar', () =>
     {
         const hrefs = [...compiled.querySelectorAll('.menu__link')].map(link => link.getAttribute('href'));
 
-        expect(hrefs).toEqual(['/#vuelos', '/#servicios', '/#experiencia']);
+        expect(hrefs).toEqual(['#vuelos', '#servicios', '#experiencia']);
         expect(compiled.querySelector('.navbar__cta')?.getAttribute('href')).toBe(CONTACT.booking);
     });
 

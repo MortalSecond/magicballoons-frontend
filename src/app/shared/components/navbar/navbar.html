@@ -1,11 +1,11 @@
 <header class="navbar" [class.navbar--scrolled]="isScrolled()" [class.navbar--open]="isOpen()">
     <div class="navbar__inner">
-        <a class="navbar__brand" href="/#inicio" (click)="close()">
+        <a class="navbar__brand" href="#inicio" (click)="close()">
             <img class="brand__logo" src="/icons/magicballoons-logo.svg" alt="" width="36" height="36">
             <span class="brand__name">Magic Balloons</span>
         </a>
 
-        <nav class="navbar__menu" id="navbar-menu" aria-label="Principal">
+        <nav class="navbar__menu" id="navbar-menu" aria-label="Principal" i18n-aria-label="@@navbar.menuLabel">
             <ul class="menu__links">
                 @for (link of links; track link.href)
                 {
@@ -13,14 +13,26 @@
                 }
             </ul>
 
-            <a class="button navbar__cta" [href]="contact.booking" (click)="close()">Reservar</a>
+            <div class="navbar__languages">
+                @for (language of languages; track language.code)
+                {
+                    <a class="language__option"
+                       [class.language__option--current]="language.isCurrent"
+                       [href]="language.path"
+                       [attr.hreflang]="language.hreflang"
+                       [attr.lang]="language.hreflang"
+                       [attr.aria-current]="language.isCurrent ? 'true' : null">{{ language.label }}</a>
+                }
+            </div>
+
+            <a class="button navbar__cta" [href]="contact.booking" (click)="close()" i18n="@@navbar.book">Reservar</a>
         </nav>
 
         <button class="navbar__toggle"
                 type="button"
                 aria-controls="navbar-menu"
                 [attr.aria-expanded]="isOpen()"
-                [attr.aria-label]="isOpen() ? 'Cerrar menú' : 'Abrir menú'"
+                [attr.aria-label]="isOpen() ? closeLabel : openLabel"
                 (click)="toggle()">
             <span class="toggle__bar"></span>
             <span class="toggle__bar"></span>
