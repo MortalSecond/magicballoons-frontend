@@ -1119,7 +1119,71 @@
         <target>Fly in a hot air balloon over the pyramids of Teotihuacan. Shared and private flights, breakfast, a sunrise toast and your own flight certificate.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.photoAlt" datatype="html">
+        <source>Pareja abrazada durante su vuelo en globo</source>
+        <target>Couple embracing during their balloon flight</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.eyebrow" datatype="html">
+        <source>Tu vuelo te espera</source>
+        <target>Your flight awaits</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.title" datatype="html">
+        <source>Vive el amanecer desde el cielo</source>
+        <target>Watch the sunrise from the sky</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.text" datatype="html">
+        <source>Reserva en línea en unos minutos, o escríbenos por WhatsApp y te ayudamos a elegir tu vuelo.</source>
+        <target>Book online in a few minutes, or message us on WhatsApp and we'll help you choose your flight.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.book" datatype="html">
+        <source>Reservar vuelo</source>
+        <target>Book your flight</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.whatsapp" datatype="html">
+        <source>Escríbenos por WhatsApp</source>
+        <target>Message us on WhatsApp</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">20,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.rating" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contact.rating.score }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> en TripAdvisor · <x id="INTERPOLATION_1" equiv-text="{{ contact.rating.count }}"/> opiniones</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contact.rating.score }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> on TripAdvisor · <x id="INTERPOLATION_1" equiv-text="{{ contact.rating.count }}"/> reviews</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cta.whatsappMessage" datatype="html">
+        <source>Hola, quiero reservar un vuelo en globo.</source>
+        <target>Hi, I'd like to book a balloon flight.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.ts</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq.eyebrow" datatype="html">
@@ -1295,7 +1359,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="location.officeText" datatype="html">
-        <source>Horario de atención: <x id="INTERPOLATION" equiv-text="{{ office.hours }}"/>. Aquí se atienden trámites administrativos; los vuelos salen del globopuerto.</source>
+        <source>Horario de atención: lunes a domingo, <x id="INTERPOLATION" equiv-text="{{ office.hours }}"/>. Aquí se atienden trámites administrativos; los vuelos salen del globopuerto.</source>
         <target>Open Monday to Sunday, <x id="INTERPOLATION" equiv-text="{{ office.hours }}"/>. This is where we handle administrative matters; flights leave from the launch site.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/location-section/location-section.html</context>

@@ -1,0 +1,30 @@
+<!-- The one real, unedited photo of the set: this is where people decide. -->
+<section class="cta" id="reservar">
+    <img class="cta__photo"
+         src="/media/couple-embrace.webp"
+         alt="Pareja abrazada durante su vuelo en globo"
+         i18n-alt="@@cta.photoAlt"
+         width="1200"
+         height="1600"
+         loading="lazy">
+
+    <div class="cta__scrim"></div>
+
+    <div class="cta__content">
+        <p class="eyebrow cta__eyebrow" i18n="@@cta.eyebrow">Tu vuelo te espera</p>
+        <h2 class="cta__title" i18n="@@cta.title">Vive el amanecer desde el cielo</h2>
+        <p class="cta__text" i18n="@@cta.text">Reserva en línea en unos minutos, o escríbenos por WhatsApp y te ayudamos a elegir tu vuelo.</p>
+
+        <div class="cta__buttons">
+            <a class="button" [href]="contact.booking" i18n="@@cta.book">Reservar vuelo</a>
+            <a class="button button--outline" [href]="whatsappUrl" target="_blank" rel="noopener" i18n="@@cta.whatsapp">Escríbenos por WhatsApp</a>
+        </div>
+
+        <p class="cta__rating">
+            <span class="rating__bubbles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+            </span>
+            <span i18n="@@cta.rating"><strong>{{ contact.rating.score }}</strong> en TripAdvisor · {{ contact.rating.count }} opiniones</span>
+        </p>
+    </div>
+</section>
