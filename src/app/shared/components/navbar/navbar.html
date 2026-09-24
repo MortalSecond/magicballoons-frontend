@@ -1,0 +1,30 @@
+<header class="navbar" [class.navbar--scrolled]="isScrolled()" [class.navbar--open]="isOpen()">
+    <div class="navbar__inner">
+        <a class="navbar__brand" href="/#inicio" (click)="close()">
+            <img class="brand__logo" src="/icons/magicballoons-logo.svg" alt="" width="36" height="36">
+            <span class="brand__name">Magic Balloons</span>
+        </a>
+
+        <nav class="navbar__menu" id="navbar-menu" aria-label="Principal">
+            <ul class="menu__links">
+                @for (link of links; track link.href)
+                {
+                    <li><a class="menu__link" [href]="link.href" (click)="close()">{{ link.label }}</a></li>
+                }
+            </ul>
+
+            <a class="button navbar__cta" [href]="contact.booking" (click)="close()">Reservar</a>
+        </nav>
+
+        <button class="navbar__toggle"
+                type="button"
+                aria-controls="navbar-menu"
+                [attr.aria-expanded]="isOpen()"
+                [attr.aria-label]="isOpen() ? 'Cerrar menú' : 'Abrir menú'"
+                (click)="toggle()">
+            <span class="toggle__bar"></span>
+            <span class="toggle__bar"></span>
+            <span class="toggle__bar"></span>
+        </button>
+    </div>
+</header>

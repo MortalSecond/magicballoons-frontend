@@ -57,6 +57,8 @@
 
 html{
     scroll-behavior: smooth;
+    /* Anchored sections land below the fixed navbar, not underneath it. */
+    scroll-padding-top: 4.5rem;
 }
 
 body{
