@@ -2,22 +2,6 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="es-MX" target-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="home.pageTitle" datatype="html">
-        <source>Magic Balloons | Vuelos en globo sobre Teotihuacán</source>
-        <target>Magic Balloons | Hot Air Balloon Flights over Teotihuacan</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="policies.pageTitle" datatype="html">
-        <source>Políticas de vuelo | Magic Balloons</source>
-        <target>Flight policies | Magic Balloons</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.routes.ts</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="site.fareharborLanguage" datatype="html">
         <source>es</source>
         <target>en</target>
@@ -1407,7 +1391,15 @@
         <target>Fly in a hot air balloon over the pyramids of Teotihuacan. Shared and private flights, breakfast, a sunrise toast and your own flight certificate.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="home.pageTitle" datatype="html">
+        <source>Magic Balloons | Vuelos en globo sobre Teotihuacán</source>
+        <target>Magic Balloons | Hot Air Balloon Flights over Teotihuacan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.photoAlt" datatype="html">
@@ -1415,7 +1407,7 @@
         <target>Couple embracing during their balloon flight</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">5,6</context>
+          <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.eyebrow" datatype="html">
@@ -1423,7 +1415,7 @@
         <target>Your flight awaits</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">14,15</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.title" datatype="html">
@@ -1431,7 +1423,7 @@
         <target>Watch the sunrise from the sky</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">15,16</context>
+          <context context-type="linenumber">17,18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.text" datatype="html">
@@ -1439,7 +1431,7 @@
         <target>Book online in a few minutes, or message us on WhatsApp and we'll help you choose your flight.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">16,18</context>
+          <context context-type="linenumber">18,20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.book" datatype="html">
@@ -1447,7 +1439,7 @@
         <target>Book your flight</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">19,20</context>
+          <context context-type="linenumber">21,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.whatsapp" datatype="html">
@@ -1455,7 +1447,7 @@
         <target>Message us on WhatsApp</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">20,23</context>
+          <context context-type="linenumber">22,25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.rating" datatype="html">
@@ -1463,7 +1455,7 @@
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contact.rating.score }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> on TripAdvisor · <x id="INTERPOLATION_1" equiv-text="{{ contact.rating.count }}"/> reviews</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.html</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cta.whatsappMessage" datatype="html">
@@ -1471,7 +1463,7 @@
         <target>Hi, I'd like to book a balloon flight.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/cta-section/cta-section.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq.eyebrow" datatype="html">
@@ -1511,7 +1503,7 @@
         <target>Magic Balloons balloons over the Teotihuacan valley at sunrise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">5,6</context>
+          <context context-type="linenumber">10,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.eyebrow" datatype="html">
@@ -1519,7 +1511,7 @@
         <target>Teotihuacan, Mexico</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">12,14</context>
+          <context context-type="linenumber">17,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.titleFirst" datatype="html">
@@ -1527,7 +1519,7 @@
         <target>The magic</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">29,30</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.titleSecond" datatype="html">
@@ -1535,7 +1527,7 @@
         <target>of flight</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">38,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.book" datatype="html">
@@ -1543,7 +1535,7 @@
         <target>Book your flight</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">44,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.seePackages" datatype="html">
@@ -1551,7 +1543,7 @@
         <target>See packages</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">40,43</context>
+          <context context-type="linenumber">45,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofRating" datatype="html">
@@ -1559,7 +1551,7 @@
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contact.rating.score }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> on TripAdvisor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="linenumber">54,55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofReviews" datatype="html">
@@ -1567,7 +1559,7 @@
         <target>· <x id="INTERPOLATION" equiv-text="{{ contact.rating.count }}"/> reviews</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">50,51</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofAfac" datatype="html">
@@ -1575,7 +1567,7 @@
         <target>Certified by the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>AFAC<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">53,54</context>
+          <context context-type="linenumber">58,59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofPassengers" datatype="html">
@@ -1583,7 +1575,7 @@
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>10,000+<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> passengers</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">54,55</context>
+          <context context-type="linenumber">59,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="journey.eyebrow" datatype="html">
@@ -1675,7 +1667,7 @@
         <target>Book</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/packages-section/packages-section.html</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">38,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reviews.eyebrow" datatype="html">
@@ -1774,12 +1766,20 @@
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="policies.pageTitle" datatype="html">
+        <source>Políticas de vuelo | Magic Balloons</source>
+        <target>Flight policies | Magic Balloons</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/policies/policies.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="policies.description" datatype="html">
         <source>Políticas de Magic Balloons: reservas, anticipo, formas de pago, cargo por peso, cambios, cancelaciones, clima y seguridad.</source>
         <target>Magic Balloons policies: bookings, deposit, payment methods, weight surcharge, changes, cancellations, weather and safety.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/policies/policies.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.tagline" datatype="html">
