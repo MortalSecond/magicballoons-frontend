@@ -185,7 +185,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="faq.arrival.answer" datatype="html">
-        <source>A las <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay estacionamiento amplio a unos pasos de recepción.</source>
+        <source>A las <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay amplio estacionamiento a unos pasos de recepción.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/faq.data.ts</context>
           <context context-type="linenumber">92</context>
@@ -227,7 +227,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="faq.clothing.answer" datatype="html">
-        <source>Ropa ligera y cómoda. Al amanecer hace fresco, pero junto al quemador hace mucho calor, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
+        <source>Ropa ligera y cómoda. Los amaneceres en Teotihuacan son frios, pero el calor del quemador de los globos puede ser abrumador, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/faq.data.ts</context>
           <context context-type="linenumber">107</context>
