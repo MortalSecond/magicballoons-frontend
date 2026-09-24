@@ -1,6 +1,6 @@
 import { Component, DestroyRef, LOCALE_ID, afterNextRender, inject, signal } from '@angular/core';
 import { CONTACT } from '../../../data/contact.data';
-import { LANGUAGES, languageFor } from '../../../data/site.data';
+import { LANGUAGES, SECTION_LINKS, languageFor } from '../../../data/site.data';
 
 @Component({
     imports: [],
@@ -11,13 +11,7 @@ import { LANGUAGES, languageFor } from '../../../data/site.data';
 export class Navbar
 {
     protected readonly contact = CONTACT;
-    protected readonly links = [
-        { href: '#vuelos', label: $localize`:@@navbar.flights:Vuelos` },
-        { href: '#servicios', label: $localize`:@@navbar.services:Servicios` },
-        { href: '#experiencia', label: $localize`:@@navbar.journey:Tu día` },
-        { href: '#opiniones', label: $localize`:@@navbar.reviews:Opiniones` },
-        { href: '#preguntas', label: $localize`:@@navbar.faq:Preguntas` }
-    ];
+    protected readonly links = SECTION_LINKS;
     protected readonly openLabel = $localize`:@@navbar.open:Abrir menú`;
     protected readonly closeLabel = $localize`:@@navbar.close:Cerrar menú`;
 

@@ -975,6 +975,41 @@
           <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="navbar.flights" datatype="html">
+        <source>Vuelos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/site.data.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navbar.services" datatype="html">
+        <source>Servicios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/site.data.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navbar.journey" datatype="html">
+        <source>Tu día</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/site.data.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navbar.reviews" datatype="html">
+        <source>Opiniones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/site.data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navbar.faq" datatype="html">
+        <source>Preguntas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/site.data.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="home.description" datatype="html">
         <source>Vuela en globo aerostático sobre las pirámides de Teotihuacán. Vuelos compartidos y privados, desayuno, brindis y certificado de vuelo.</source>
         <context-group purpose="location">
@@ -1287,6 +1322,69 @@
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="footer.tagline" datatype="html">
+        <source>Vuelos en globo al amanecer sobre Teotihuacán.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.book" datatype="html">
+        <source>Reservar vuelo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.sectionsLabel" datatype="html">
+        <source>Secciones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.explore" datatype="html">
+        <source>Explora</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.contact" datatype="html">
+        <source>Contacto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.officeHours" datatype="html">
+        <source>Lunes a domingo, <x id="INTERPOLATION" equiv-text="{{ contact.locations.office.hours }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.follow" datatype="html">
+        <source>Síguenos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.whatsappMessage" datatype="html">
+        <source>Hola, quiero información sobre los vuelos en globo.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.location" datatype="html">
+        <source>Cómo llegar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/footer/footer.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="viewer.close" datatype="html">
         <source>Cerrar</source>
         <context-group purpose="location">
@@ -1308,53 +1406,18 @@
           <context context-type="linenumber">28,31</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="navbar.flights" datatype="html">
-        <source>Vuelos</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="navbar.services" datatype="html">
-        <source>Servicios</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="navbar.journey" datatype="html">
-        <source>Tu día</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="navbar.reviews" datatype="html">
-        <source>Opiniones</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="navbar.faq" datatype="html">
-        <source>Preguntas</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="navbar.open" datatype="html">
         <source>Abrir menú</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="navbar.close" datatype="html">
         <source>Cerrar menú</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
     </body>

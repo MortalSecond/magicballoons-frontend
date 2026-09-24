@@ -1,0 +1,62 @@
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__brand">
+            <a class="brand__link" href="#inicio">
+                <img class="brand__logo" src="/icons/magicballoons-logo.svg" alt="" width="40" height="40">
+                <span class="brand__name">Magic Balloons</span>
+            </a>
+            <p class="brand__tagline" i18n="@@footer.tagline">Vuelos en globo al amanecer sobre Teotihuacán.</p>
+            <a class="button footer__book" [href]="contact.booking" i18n="@@footer.book">Reservar vuelo</a>
+        </div>
+
+        <nav class="footer__column" aria-label="Secciones" i18n-aria-label="@@footer.sectionsLabel">
+            <h2 class="column__title" i18n="@@footer.explore">Explora</h2>
+            <ul class="column__list">
+                @for (link of links; track link.href)
+                {
+                    <li><a class="column__link" [href]="link.href">{{ link.label }}</a></li>
+                }
+            </ul>
+        </nav>
+
+        <div class="footer__column">
+            <h2 class="column__title" i18n="@@footer.contact">Contacto</h2>
+            <ul class="column__list">
+                <li><a class="column__link" [href]="whatsappUrl" target="_blank" rel="noopener">WhatsApp</a></li>
+                <li><a class="column__link" [href]="contact.phoneHref">{{ contact.phone }}</a></li>
+                <li class="column__detail">
+                    <span class="detail__label">{{ contact.locations.office.name }}</span>
+                    <span i18n="@@footer.officeHours">Lunes a domingo, {{ contact.locations.office.hours }}</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column">
+            <h2 class="column__title" i18n="@@footer.follow">Síguenos</h2>
+            <ul class="column__list">
+                @for (network of social; track network.label)
+                {
+                    <li><a class="column__link" [href]="network.href" target="_blank" rel="noopener">{{ network.label }}</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <p class="footer__copyright">© {{ year }} Magic Balloons México</p>
+
+        <ul class="footer__languages">
+            @for (language of languages; track language.code)
+            {
+                <li>
+                    <a class="language__link"
+                       [class.language__link--current]="language.isCurrent"
+                       [href]="language.path"
+                       [attr.hreflang]="language.hreflang"
+                       [attr.lang]="language.hreflang"
+                       [attr.aria-current]="language.isCurrent ? 'true' : null">{{ language.label }}</a>
+                </li>
+            }
+        </ul>
+    </div>
+</footer>

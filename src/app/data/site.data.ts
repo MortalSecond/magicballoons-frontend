@@ -12,6 +12,16 @@ export interface Language
     label: string;
 }
 
+// Section anchors, shared by the navbar and the footer. Fragments resolve
+// against <base href>, so they stay inside the current language.
+export const SECTION_LINKS = [
+    { href: '#vuelos', label: $localize`:@@navbar.flights:Vuelos` },
+    { href: '#servicios', label: $localize`:@@navbar.services:Servicios` },
+    { href: '#experiencia', label: $localize`:@@navbar.journey:Tu día` },
+    { href: '#opiniones', label: $localize`:@@navbar.reviews:Opiniones` },
+    { href: '#preguntas', label: $localize`:@@navbar.faq:Preguntas` }
+];
+
 // Spanish is the source and lives at the root; see i18n in angular.json.
 export const LANGUAGES: Language[] = [
     { code: 'es', hreflang: 'es-MX', path: '/', label: 'ES' },
