@@ -1,0 +1,248 @@
+/* Journey */
+
+.journey{
+    padding: 8rem 5rem;
+
+    background-color: var(--cream);
+}
+
+.journey__inner{
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    align-items: start;
+    gap: 5rem;
+
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.journey__titles{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: sticky;
+    top: 8rem;
+}
+
+.journey__eyebrow{
+    color: var(--inkMuted);
+}
+
+.journey__title{
+    color: var(--night);
+}
+
+/* Timeline. The rail runs through the centre of the dots: dots are 2.5rem
+   wide, so the rail sits at 1.25rem. */
+
+.journey__steps{
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.journey__steps::before,
+.journey__steps::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(1.25rem - 1px);
+
+    width: 2px;
+}
+
+.journey__steps::before{
+    background-color: rgba(11, 14, 26, 0.1);
+}
+
+.journey__steps::after{
+    background-color: var(--red);
+    transform-origin: top;
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: relative;
+}
+
+.step__phase{
+    padding-left: 4.25rem;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--inkMuted);
+}
+
+.step__row{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.75rem;
+}
+
+.step__dot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    position: relative;
+    z-index: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+
+    border: solid 2px var(--red);
+    border-radius: 50%;
+    background-color: var(--red);
+}
+
+.step__body{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding-top: 0.3rem;
+}
+
+.step__title{
+    font-family: var(--displayFont);
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: var(--night);
+}
+
+.step__text{
+    max-width: 34rem;
+
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--inkMuted);
+}
+
+.step__tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin-top: 0.35rem;
+}
+
+.tag{
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    color: var(--inkMuted);
+
+    padding: 0.35rem 0.85rem;
+    border: solid 1px rgba(11, 14, 26, 0.15);
+    border-radius: 3rem;
+}
+
+.tag--safety{
+    color: var(--red);
+    border-color: var(--red);
+}
+
+/* Scroll-driven: the rail fills so its tip stays on the middle of the screen,
+   and each step lights up as it crosses that line. The styles above are the
+   finished state, so browsers without scroll timelines see a complete timeline. */
+
+@keyframes rail-fill{
+    from{
+        scale: 1 0;
+    }
+
+    to{
+        scale: 1 1;
+    }
+}
+
+@keyframes dot-light{
+    from{
+        color: var(--inkMuted);
+        border-color: rgba(11, 14, 26, 0.2);
+        background-color: var(--cream);
+    }
+}
+
+@keyframes body-light{
+    from{
+        opacity: 0.35;
+    }
+}
+
+@supports (animation-timeline: view()){
+    @media (prefers-reduced-motion: no-preference){
+        .journey__steps::after{
+            animation: rail-fill linear both;
+            animation-timeline: view();
+            animation-range: cover 50vh cover calc(100% - 50vh);
+        }
+
+        .step__dot{
+            animation: dot-light linear both;
+            animation-timeline: view();
+            animation-range: cover 50vh cover calc(50vh + 1.5rem);
+        }
+
+        .step__body{
+            animation: body-light linear both;
+            animation-timeline: view();
+            animation-range: cover calc(50vh - 6rem) cover 50vh;
+        }
+    }
+}
+
+/* ============================================================
+                    MOBILE RESPONSIVE ADDITIONS
+   ============================================================ */
+
+@media (max-width: 900px){
+    .journey__inner{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .journey__titles{
+        position: static;
+    }
+}
+
+@media (max-width: 768px){
+    .journey{
+        padding: 5rem 1.5rem;
+    }
+
+    .journey__steps{
+        gap: 2.25rem;
+    }
+
+    .step__row{
+        gap: 1.25rem;
+    }
+
+    .step__phase{
+        padding-left: 3.75rem;
+    }
+
+    .step__title{
+        font-size: 1.5rem;
+    }
+}

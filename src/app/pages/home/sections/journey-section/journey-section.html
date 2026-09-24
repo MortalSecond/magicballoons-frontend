@@ -1,0 +1,39 @@
+<section class="journey" id="experiencia">
+    <div class="journey__inner">
+        <div class="journey__titles">
+            <p class="eyebrow journey__eyebrow">Tu día</p>
+            <h2 class="journey__title">Así es tu vuelo</h2>
+        </div>
+
+        <ol class="journey__steps">
+            @for (step of steps; track step.id)
+            {
+                <li class="step">
+                    @if (step.startsPhase)
+                    {
+                        <p class="step__phase">{{ step.phase }}</p>
+                    }
+
+                    <div class="step__row">
+                        <span class="step__dot" aria-hidden="true">{{ step.number }}</span>
+
+                        <div class="step__body">
+                            <h3 class="step__title">{{ step.title }}</h3>
+                            <p class="step__text">{{ step.text }}</p>
+
+                            @if (step.tags.length)
+                            {
+                                <ul class="step__tags">
+                                    @for (tag of step.tags; track tag.label)
+                                    {
+                                        <li class="tag" [class.tag--safety]="tag.kind === 'safety'">{{ tag.label }}</li>
+                                    }
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </li>
+            }
+        </ol>
+    </div>
+</section>
