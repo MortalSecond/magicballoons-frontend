@@ -55,6 +55,8 @@
 }
 
 .brand__name{
+    white-space: nowrap;
+
     font-family: var(--displayFont);
     font-size: 1.35rem;
     letter-spacing: 0.05rem;
@@ -66,17 +68,18 @@
 .navbar__menu{
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.75rem;
 }
 
 .menu__links{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .menu__link{
     position: relative;
+    white-space: nowrap;
 
     font-size: 0.85rem;
     font-weight: 700;
@@ -189,7 +192,8 @@
                     MOBILE RESPONSIVE ADDITIONS
    ============================================================ */
 
-@media (max-width: 900px){
+/* The full row needs about 1150px since the FAQ link joined it. */
+@media (max-width: 1150px){
     .navbar__inner{
         padding: 1rem 1.5rem;
     }

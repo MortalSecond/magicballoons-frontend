@@ -1,0 +1,32 @@
+<section class="faq" id="preguntas">
+    <div class="faq__inner">
+        <div class="faq__titles">
+            <p class="eyebrow faq__eyebrow" i18n="@@faq.eyebrow">Preguntas frecuentes</p>
+            <h2 class="faq__title" i18n="@@faq.title">Antes de volar</h2>
+
+            <a class="button faq__ask" [href]="askUrl" target="_blank" rel="noopener" i18n="@@faq.ask">¿Otra pregunta? Escríbenos</a>
+        </div>
+
+        <!-- Native <details>: answers stay in the prerendered HTML while
+             collapsed, so they are indexed, and open without any JS. -->
+        <div class="faq__groups">
+            @for (group of groups; track group.id)
+            {
+                <div class="faq__group">
+                    <h3 class="group__title">{{ group.title }}</h3>
+
+                    @for (item of group.items; track item.id)
+                    {
+                        <details class="question" [id]="'faq-' + item.id">
+                            <summary class="question__summary">
+                                <span class="question__text">{{ item.question }}</span>
+                                <span class="question__icon" aria-hidden="true"></span>
+                            </summary>
+                            <p class="question__answer">{{ item.answer }}</p>
+                        </details>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>

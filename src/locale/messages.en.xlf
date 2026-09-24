@@ -34,6 +34,326 @@
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="faq.group.booking" datatype="html">
+        <source>Reserva y pagos</source>
+        <target>Booking and payment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.howToBook.question" datatype="html">
+        <source>¿Cómo reservo?</source>
+        <target>How do I book?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.howToBook.answer" datatype="html">
+        <source>En línea con el botón Reservar, o por WhatsApp con uno de nuestros asesores.</source>
+        <target>Online with the Book button, or on WhatsApp with one of our sales advisors.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.deposit.question" datatype="html">
+        <source>¿Tengo que dejar un anticipo?</source>
+        <target>Do I need to pay a deposit?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.deposit.answer" datatype="html">
+        <source>Sí, $<x id="deposit" equiv-text="P.depositPerPassenger"/> MXN por pasajero al reservar. Planeamos cada vuelo la noche anterior según los pasajeros confirmados, y el anticipo aparta tu lugar en la canasta. El resto lo pagas el día del vuelo en recepción.</source>
+        <target>Yes, $<x id="deposit" equiv-text="P.depositPerPassenger"/> MXN per passenger when you book. We plan every flight the night before around the confirmed passengers, and your deposit holds your place in the basket. You pay the rest at reception on the day of your flight.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.payment.question" datatype="html">
+        <source>¿Cómo puedo pagar?</source>
+        <target>How can I pay?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.payment.answer" datatype="html">
+        <source>En recepción aceptamos efectivo, transferencia y tarjeta; la terminal cobra un <x id="cardFee" equiv-text="P.cardFeePercent"/>% adicional. Al reservar también puedes pagar con PayPal, con un cargo de <x id="paypalFee" equiv-text="P.paypalFeePercent"/>%. Aceptamos dólares a un tipo de cambio fijo de $<x id="rate" equiv-text="P.pesosPerDollar"/> MXN por dólar.</source>
+        <target>At reception we take cash, bank transfers and cards; card payments carry an extra <x id="cardFee" equiv-text="P.cardFeePercent"/>% terminal fee. When booking, you can also pay by PayPal, which adds <x id="paypalFee" equiv-text="P.paypalFeePercent"/>%. We accept US dollars at a fixed rate of $<x id="rate" equiv-text="P.pesosPerDollar"/> MXN per dollar.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.weight.question" datatype="html">
+        <source>¿Hay un cargo por peso?</source>
+        <target>Is there a weight surcharge?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.weight.answer" datatype="html">
+        <source>Sí. Por seguridad pesamos a cada pasajero en recepción, y a partir de <x id="fromKg" equiv-text="P.surchargeFromKg"/> kg se cobran $<x id="perKg" equiv-text="P.surchargePerKg"/> MXN por cada kilo adicional. Por ejemplo, un pasajero de <x id="exampleKg" equiv-text="EXAMPLE_KG"/> kg paga $<x id="exampleCost" equiv-text="EXAMPLE_COST"/> MXN extra.</source>
+        <target>Yes. For safety, we weigh every passenger at reception, and from <x id="fromKg" equiv-text="P.surchargeFromKg"/> kg there is a charge of $<x id="perKg" equiv-text="P.surchargePerKg"/> MXN for each additional kilo. For example, a passenger weighing <x id="exampleKg" equiv-text="EXAMPLE_KG"/> kg pays $<x id="exampleCost" equiv-text="EXAMPLE_COST"/> MXN extra.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.children.question" datatype="html">
+        <source>¿Los niños pagan menos?</source>
+        <target>Do children pay less?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.children.answer" datatype="html">
+        <source>No. Los niños ocupan su propio lugar en la canasta, en el transporte y en el desayuno. Pueden volar a partir de los <x id="minimumAge" equiv-text="P.minimumAge"/> años; los más pequeños no suben al globo, pero sí disfrutan del resto de la experiencia.</source>
+        <target>No. Children take up their own place in the basket, in the transport and at breakfast. They can fly from age <x id="minimumAge" equiv-text="P.minimumAge"/>; younger children don't board the balloon, but they can enjoy the rest of the experience.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.group.changes" datatype="html">
+        <source>Cambios y cancelaciones</source>
+        <target>Changes and cancellations</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.reschedule.question" datatype="html">
+        <source>¿Puedo cambiar la fecha?</source>
+        <target>Can I change my date?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.reschedule.answer" datatype="html">
+        <source>Sí, sin costo, si nos avisas por WhatsApp con al menos 48 horas de anticipación. La nueva fecha debe ser dentro de los tres meses siguientes.</source>
+        <target>Yes, free of charge, if you let us know on WhatsApp at least 48 hours in advance. Your new date must fall within the following three months.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.cancel.question" datatype="html">
+        <source>¿Y si necesito cancelar?</source>
+        <target>What if I need to cancel?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.cancel.answer" datatype="html">
+        <source>Si cancelas entre 48 y 12 horas antes del vuelo, se cobra el 30% del total. Con menos de 12 horas de aviso, el anticipo no es reembolsable.</source>
+        <target>If you cancel between 48 and 12 hours before your flight, 30% of the total is charged. With less than 12 hours' notice, the deposit is non-refundable.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.noShow.question" datatype="html">
+        <source>¿Qué pasa si alguien de mi grupo no llega?</source>
+        <target>What if someone in my group doesn't show up?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.noShow.answer" datatype="html">
+        <source>El día del vuelo solo pagan quienes vuelan: si reservaron cinco y llegan cuatro, pagan cuatro. El anticipo de quien no llegó no se reembolsa, porque su lugar ya estaba apartado en el plan de vuelo.</source>
+        <target>On flight day, only those who fly pay: if five people booked and four arrive, you pay for four. The deposit of the person who didn't come is non-refundable, since their seat was already set aside in the flight plan.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.weather.question" datatype="html">
+        <source>¿Y si el clima no permite volar?</source>
+        <target>What if the weather doesn't allow us to fly?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.weather.answer" datatype="html">
+        <source>El piloto decide cada mañana, siempre por seguridad. Si el viento, la lluvia o la neblina impiden volar, reprogramamos tu vuelo contigo sin ningún costo, y tu anticipo se queda apartando tu nueva fecha.</source>
+        <target>The pilot decides each morning, always putting safety first. If wind, rain or fog make flying unsafe, we reschedule your flight with you at no cost, and your deposit carries over to your new date.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.group.flightDay" datatype="html">
+        <source>El día del vuelo</source>
+        <target>Flight day</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.arrival.question" datatype="html">
+        <source>¿A qué hora debo llegar?</source>
+        <target>What time should I arrive?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.arrival.answer" datatype="html">
+        <source>A las <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. a nuestro globopuerto en Teotihuacán; te confirmamos la hora exacta la noche anterior. Hay estacionamiento amplio a unos pasos de recepción.</source>
+        <target>At <x id="arrivalTime" equiv-text="P.arrivalTime"/> a.m. at our launch site in Teotihuacan; we confirm the exact time the night before. There is plenty of parking just steps from reception.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.pickup.question" datatype="html">
+        <source>¿Pasan por mí?</source>
+        <target>Can you pick me up?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.pickup.answer" datatype="html">
+        <source>Si tu paquete incluye transporte, te recogemos en cualquier dirección dentro de la Ciudad de México. Tu chofer te llama la noche anterior o esa misma mañana para confirmar el punto de encuentro.</source>
+        <target>If your package includes transport, we pick you up at any address in Mexico City. Your driver will call you the night before or that same morning to confirm the meeting point.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.duration.question" datatype="html">
+        <source>¿Cuánto dura el vuelo?</source>
+        <target>How long is the flight?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.duration.answer" datatype="html">
+        <source>Alrededor de <x id="minutes" equiv-text="P.flightMinutes"/> minutos en el aire. La ruta y el lugar de aterrizaje dependen del viento de ese día.</source>
+        <target>About <x id="minutes" equiv-text="P.flightMinutes"/> minutes in the air. The route and landing spot depend on that day's wind.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.clothing.question" datatype="html">
+        <source>¿Qué ropa llevo?</source>
+        <target>What should I wear?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.clothing.answer" datatype="html">
+        <source>Ropa ligera y cómoda. Al amanecer hace fresco, pero junto al quemador hace mucho calor, así que un abrigo grueso solo estorba. Puedes llegar abrigado y dejar tu chamarra en nuestros casilleros gratuitos.</source>
+        <target>Light, comfortable clothes. It's cool at dawn, but it gets very warm next to the burner, so a heavy coat just gets in the way. Feel free to arrive bundled up and leave your jacket in our free lockers.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.bags.question" datatype="html">
+        <source>¿Qué puedo subir al globo?</source>
+        <target>What can I take on the balloon?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.bags.answer" datatype="html">
+        <source>Tu celular, una cámara y objetos pequeños. No se permiten mochilas ni bolsas, ni siquiera bolsos pequeños, porque pueden atorarse durante el vuelo. Todo lo demás se queda seguro en nuestros casilleros gratuitos.</source>
+        <target>Your phone, a camera and small items. Backpacks and bags aren't allowed, not even small purses, because they can get caught during the flight. Everything else stays safe in our free lockers.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.photos.question" datatype="html">
+        <source>¿Las fotos están incluidas?</source>
+        <target>Are photos included?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.photos.answer" datatype="html">
+        <source>Se venden por separado. Nuestros fotógrafos toman fotos y video con dron, y puedes elegir entre paquetes de $<x id="photosFrom" equiv-text="P.photosFrom"/> a $<x id="photosTo" equiv-text="P.photosTo"/> MXN, editados o sin editar.</source>
+        <target>They're sold separately. Our photographers shoot photos and drone video, and you can choose packages from $<x id="photosFrom" equiv-text="P.photosFrom"/> to $<x id="photosTo" equiv-text="P.photosTo"/> MXN, edited or unedited.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.celebrations.question" datatype="html">
+        <source>¿Puedo celebrar algo especial?</source>
+        <target>Can I celebrate a special occasion?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.celebrations.answer" datatype="html">
+        <source>¡Claro! Tenemos letreros y lonas para pedidas de mano, declaraciones de amor, aniversarios, cumpleaños y hasta para preguntar &quot;¿quieres ser mi novia?&quot;. Escríbenos por WhatsApp para prepararlo.</source>
+        <target>Absolutely! We have signs and banners for marriage proposals, declarations of love, anniversaries, birthdays and even for asking &quot;Will you be my girlfriend?&quot;. Message us on WhatsApp so we can get everything ready.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.group.safety" datatype="html">
+        <source>Seguridad</source>
+        <target>Safety</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.safe.question" datatype="html">
+        <source>¿Es seguro volar en globo?</source>
+        <target>Is hot air ballooning safe?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.safe.answer" datatype="html">
+        <source>Sí. Somos una empresa certificada por la AFAC, nuestros pilotos están certificados y cada vuelo se decide esa misma mañana según el clima. Solo te pedimos seguir en todo momento las indicaciones del piloto.</source>
+        <target>Yes. We're an AFAC-certified company, our pilots are certified, and every flight is decided that same morning based on the weather. All we ask is that you follow the pilot's instructions at all times.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.restrictions.question" datatype="html">
+        <source>¿Quién no puede volar?</source>
+        <target>Who can't fly?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.restrictions.answer" datatype="html">
+        <source>Por seguridad no pueden volar mujeres embarazadas, personas con enfermedades del corazón o cirugías recientes, con problemas de columna, usuarios de silla de ruedas, ni personas bajo los efectos del alcohol u otras sustancias. Si pesas más de <x id="warningKg" equiv-text="P.weightWarningKg"/> kg, consúltanos antes de reservar: la altura exige mucho al corazón.</source>
+        <target>For safety reasons, pregnant women, people with heart conditions or recent surgery, people with spinal problems, wheelchair users and anyone under the influence of alcohol or other substances cannot fly. If you weigh more than <x id="warningKg" equiv-text="P.weightWarningKg"/> kg, please check with us before booking: altitude puts real strain on the heart.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/faq.data.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="journey.tag.transport" datatype="html">
         <source>Con transporte</source>
         <target>With transport</target>
@@ -799,7 +1119,39 @@
         <target>Fly in a hot air balloon over the pyramids of Teotihuacan. Shared and private flights, breakfast, a sunrise toast and your own flight certificate.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.eyebrow" datatype="html">
+        <source>Preguntas frecuentes</source>
+        <target>Frequently asked questions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/faq-section/faq-section.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.title" datatype="html">
+        <source>Antes de volar</source>
+        <target>Before you fly</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/faq-section/faq-section.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.ask" datatype="html">
+        <source>¿Otra pregunta? Escríbenos</source>
+        <target>Another question? Message us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/faq-section/faq-section.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq.askMessage" datatype="html">
+        <source>Hola, tengo una pregunta sobre los vuelos.</source>
+        <target>Hi, I have a question about the flights.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/sections/faq-section/faq-section.ts</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.posterAlt" datatype="html">
@@ -1058,12 +1410,20 @@
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="navbar.faq" datatype="html">
+        <source>Preguntas</source>
+        <target>FAQ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="navbar.open" datatype="html">
         <source>Abrir menú</source>
         <target>Open menu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="navbar.close" datatype="html">
@@ -1071,7 +1431,7 @@
         <target>Close menu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/components/navbar/navbar.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
     </body>

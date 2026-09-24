@@ -15,7 +15,8 @@ export class Navbar
         { href: '#vuelos', label: $localize`:@@navbar.flights:Vuelos` },
         { href: '#servicios', label: $localize`:@@navbar.services:Servicios` },
         { href: '#experiencia', label: $localize`:@@navbar.journey:Tu día` },
-        { href: '#opiniones', label: $localize`:@@navbar.reviews:Opiniones` }
+        { href: '#opiniones', label: $localize`:@@navbar.reviews:Opiniones` },
+        { href: '#preguntas', label: $localize`:@@navbar.faq:Preguntas` }
     ];
     protected readonly openLabel = $localize`:@@navbar.open:Abrir menú`;
     protected readonly closeLabel = $localize`:@@navbar.close:Cerrar menú`;
