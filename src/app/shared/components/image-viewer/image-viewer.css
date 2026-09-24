@@ -1,0 +1,64 @@
+/* Image viewer */
+
+.viewer{
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 0;
+    overflow: visible;
+    border: none;
+    background-color: transparent;
+}
+
+.viewer[open]{
+    animation: viewer-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.viewer::backdrop{
+    background-color: rgba(5, 7, 15, 0.9);
+}
+
+.viewer__image{
+    max-width: 90vw;
+    max-height: 90vh;
+
+    border-radius: 0.75rem;
+}
+
+.viewer__close{
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    font-size: 1.4rem;
+    color: var(--night);
+
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+}
+
+@keyframes viewer-in{
+    from{
+        opacity: 0;
+        scale: 0.96;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* ============================================================
+                    MOBILE RESPONSIVE ADDITIONS
+   ============================================================ */
+
+@media (max-width: 768px){
+    .viewer__close{
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}

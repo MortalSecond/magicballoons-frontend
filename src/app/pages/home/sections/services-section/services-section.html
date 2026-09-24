@@ -1,0 +1,86 @@
+<section class="services" id="servicios">
+    <div class="services__header">
+        <div class="services__titles">
+            <p class="eyebrow services__eyebrow">Más que vuelos</p>
+            <h2 class="services__title">Nuestros servicios</h2>
+        </div>
+
+        <div class="services__tabs" role="tablist" aria-label="Servicios">
+            @for (service of services; track service.id; let index = $index)
+            {
+                <button class="tabs__tab"
+                        type="button"
+                        role="tab"
+                        [id]="'tab-' + service.id"
+                        [attr.aria-controls]="'panel-' + service.id"
+                        [attr.aria-selected]="index === active()"
+                        [class.tabs__tab--active]="index === active()"
+                        (click)="select(index)">
+                    {{ service.name }}
+                </button>
+            }
+        </div>
+    </div>
+
+    <!-- Every slide is rendered and the inactive ones are hidden with CSS, so
+         all of them are in the prerendered HTML. Never switch this to @if. -->
+    <div class="services__stage">
+        @for (service of services; track service.id; let index = $index)
+        {
+            <article class="service"
+                     role="tabpanel"
+                     [id]="'panel-' + service.id"
+                     [attr.aria-labelledby]="'tab-' + service.id"
+                     [attr.inert]="index === active() ? null : ''"
+                     [class.service--active]="index === active()">
+
+                <div class="service__gallery">
+                    @for (image of service.gallery; track $index)
+                    {
+                        <button class="gallery__item" type="button" (click)="expand(image)">
+                            <img class="gallery__image" [src]="image.src" [alt]="image.alt" width="400" height="400" loading="lazy">
+                        </button>
+                    }
+                </div>
+
+                <div class="service__info">
+                    <h3 class="service__title">{{ service.title }}</h3>
+
+                    @for (paragraph of service.description; track $index)
+                    {
+                        <p class="service__text">{{ paragraph }}</p>
+                    }
+
+                    <ul class="service__highlights">
+                        @for (highlight of service.highlights; track highlight.label)
+                        {
+                            <li class="highlights__item">
+                                @if (highlight.icon)
+                                {
+                                    <img class="highlights__icon" [src]="highlight.icon" alt="" width="24" height="24">
+                                }
+                                @else
+                                {
+                                    <span class="highlights__marker"></span>
+                                }
+                                {{ highlight.label }}
+                            </li>
+                        }
+                    </ul>
+
+                    <a class="button service__button" [href]="service.url" target="_blank" rel="noopener">
+                        Escríbenos por WhatsApp
+                    </a>
+                </div>
+            </article>
+        }
+    </div>
+
+    <div class="services__controls">
+        <button class="controls__arrow" type="button" aria-label="Servicio anterior" (click)="step(-1)">←</button>
+        <span class="controls__count">{{ active() + 1 }} / {{ services.length }}</span>
+        <button class="controls__arrow" type="button" aria-label="Siguiente servicio" (click)="step(1)">→</button>
+    </div>
+
+    <app-image-viewer [image]="expanded()" (closed)="expanded.set(null)" />
+</section>

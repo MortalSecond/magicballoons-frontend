@@ -1,0 +1,8 @@
+<!-- (close) fires for every way a dialog can close, Esc included. -->
+<dialog class="viewer" #dialog (close)="closed.emit()" (click)="dialog.close()">
+    @if (image(); as image)
+    {
+        <img class="viewer__image" [src]="image.src" [alt]="image.alt">
+    }
+    <button class="viewer__close" type="button" aria-label="Cerrar">×</button>
+</dialog>
