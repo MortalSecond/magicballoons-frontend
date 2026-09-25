@@ -1,0 +1,69 @@
+/* Not found: one dark screen, so the transparent navbar stays readable. */
+
+.not-found{
+    display: flex;
+    align-items: center;
+
+    min-height: 80svh;
+    padding: 10rem 5rem 6rem;
+
+    color: white;
+
+    background-color: var(--night);
+}
+
+.not-found__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.not-found__eyebrow{
+    color: var(--sand);
+}
+
+.not-found__title{
+    max-width: 14ch;
+
+    font-size: 4.5rem;
+}
+
+.not-found__text{
+    max-width: 32rem;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--sand);
+}
+
+.not-found__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 0.5rem;
+}
+
+/* ============================================================
+                    MOBILE RESPONSIVE ADDITIONS
+   ============================================================ */
+
+@media (max-width: 768px){
+    .not-found{
+        padding: 8rem 1.5rem 5rem;
+    }
+
+    .not-found__title{
+        font-size: 3rem;
+    }
+
+    .not-found__buttons{
+        flex-direction: column;
+        align-self: stretch;
+    }
+}

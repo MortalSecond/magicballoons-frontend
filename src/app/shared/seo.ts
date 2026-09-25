@@ -6,8 +6,10 @@ export interface PageSeo
 {
     title: string;
     description: string;
-    // Relative to the language root: '' for home, 'politicas' and so on.
+    // Relative to the language root: '' for home, 'politicas/' and so on.
     path?: string;
+    // For pages that must never appear in search, like the 404.
+    noindex?: boolean;
 }
 
 // The preview shown when a link is shared on WhatsApp, Facebook and the like.
@@ -37,6 +39,14 @@ export class Seo
 
         this.title.setTitle(page.title);
         this.meta.updateTag({ name: 'description', content: page.description });
+
+        // A page kept out of search has no canonical URL or alternates to claim.
+        if (page.noindex)
+        {
+            this.meta.updateTag({ name: 'robots', content: 'noindex' });
+            return;
+        }
+
         this.link('canonical', url);
 
         for (const language of LANGUAGES)

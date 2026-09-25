@@ -1,0 +1,14 @@
+<main class="not-found">
+    <div class="not-found__content">
+        <p class="eyebrow not-found__eyebrow">404</p>
+        <h1 class="not-found__title" i18n="@@notFound.title">Esta página se fue con el viento</h1>
+        <p class="not-found__text" i18n="@@notFound.text">No encontramos lo que buscabas, pero tu vuelo sigue aquí.</p>
+
+        <!-- Relative links resolve against <base href>, so each language stays in itself. -->
+        <div class="not-found__buttons">
+            <a class="button" href="./" i18n="@@notFound.home">Ir al inicio</a>
+            <a class="button button--outline" href="#vuelos" i18n="@@notFound.packages">Ver vuelos</a>
+            <a class="button button--outline" [href]="whatsappUrl" target="_blank" rel="noopener" i18n="@@notFound.whatsapp">Escríbenos por WhatsApp</a>
+        </div>
+    </div>
+</main>

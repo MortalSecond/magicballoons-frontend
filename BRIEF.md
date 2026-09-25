@@ -40,7 +40,7 @@ knows how reception actually operates.
 | Fonts | Anton + Montserrat, self-hosted via `@fontsource` (Latin subset) |
 | Tests | Vitest through `ng test` |
 | Media tooling | Python + ImageMagick 7 (`magick`) |
-| Hosting | Vercel for previews now; Cloudflare Pages is the target (section 9) |
+| Hosting | Cloudflare Worker serving static assets only, `wrangler.jsonc` (section 9) |
 
 Add new packages with `--save-exact` (Leaflet and the fonts are pinned). A caret
 once pulled `@angular/localize` 22.2.0 against a 22.1.7 compiler and broke the
@@ -54,7 +54,7 @@ together with `ng update`, never one at a time.
 ```bash
 npm start                                   # dev server, Spanish, port 4200
 npx ng serve -c en                          # dev server, English
-npx ng build                                # both languages, prerendered, into dist/
+npm run build                               # both languages, prerendered, + 404.html copies
 npx ng test --watch=false                   # all specs
 npx ng extract-i18n                         # refresh src/locale/messages.xlf
 python scripts/merge-translations.py x.json # add English for new strings
@@ -97,12 +97,14 @@ src/
     pages/
       home/                   the one-page site, sections in sections/
       policies/               /politicas/
+      not-found/              404 page, noindex; copied to 404.html and en/404.html
 public/
   media/                      photos (+ generated -480/-800/-1200 copies), og-cover.jpg
   icons/                      black single-colour SVGs, recoloured with a CSS filter
   robots.txt  sitemap.xml  _redirects
   favicon.svg favicon.ico apple-touch-icon.png   from the logo; the ICO's 16/32px use a tighter crop
-scripts/                      responsive-images.py, merge-translations.py
+scripts/                      responsive-images.py, merge-translations.py, copy-404.mjs
+wrangler.jsonc                Cloudflare: static assets only, 404-page handling
 ```
 
 Outside the repo, in `MagicBalloonsAngular/`: `source-media/` holds the raw
@@ -257,18 +259,26 @@ font is the known next step if the simulated number matters.
 
 ## 9. Deployment and domain
 
+- **Hosting:** a Cloudflare Worker in Magic's Cloudflare account, built from
+  this repo (`master`) by Cloudflare's GitHub integration. Preview URL:
+  `magicballoons-frontend.facturacionpublicidadag.workers.dev`.
+- **`wrangler.jsonc` must stay.** Without it, Cloudflare guessed a config that
+  deployed Angular's SSR server, which answered every missing URL with a
+  plain-text 400 ("Header host ... is not allowed"). The file declares an
+  assets-only Worker with `not_found_handling: "404-page"`.
+- **The build command must be `npm run build`,** not `ng build`: the script
+  runs `scripts/copy-404.mjs`, which Cloudflare needs for 404 pages.
+- Verified with `npx wrangler dev`: real pages 200, missing URLs 404 with the
+  branded page per language, old policies URL 301, `/politicas` 307 to
+  `/politicas/`.
 - **Registrar:** GoDaddy, in Magic's account. `magicballoonsmexico.com`
-  expires 2027-09-19.
-- **Today** the nameservers are GoDaddy's and the domain serves a parking page
-  (a redirect to `/lander`, status 200 everywhere). Search rankings drain while
-  that lasts. Deploying is the most valuable SEO step left.
-- **Plan:** a Cloudflare account owned by Magic (company email), Moss invited
-  as administrator. Cloudflare Pages connected to GitHub through the Cloudflare
-  GitHub App with access to **this repository only**. Build `npx ng build`,
-  output `dist/magicballoons-frontend/browser`.
-- **Domain:** add the site in Cloudflare, then in GoDaddy disable Domain
-  Protection and switch the nameservers to Cloudflare's two. Add
-  `magicballoonsmexico.com` and `www` as custom domains on the Pages project.
+  expires 2027-09-19. It has no MX or TXT records (no email to protect).
+- **Domain steps:** add the site in Cloudflare (Free plan), then in GoDaddy
+  remove the domain lock / Domain Protection and switch the nameservers to
+  Cloudflare's two. Once Cloudflare shows the zone as active, add
+  `magicballoonsmexico.com` and `www.magicballoonsmexico.com` as Custom Domains
+  on the Worker. `SITE_URL` and all canonicals use the bare domain, so `www`
+  should redirect to it.
 - `magicballoons.com`, printed on their old flyers, belongs to someone else and
   is parked for sale on Sedo.
 

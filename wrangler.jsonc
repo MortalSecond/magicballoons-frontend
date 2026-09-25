@@ -1,0 +1,15 @@
+// Cloudflare Worker for the site. The site is fully prerendered, so this only
+// serves static files: there is no "main" script, and Angular's SSR server in
+// the build output is never deployed. Without this file, Cloudflare guessed a
+// config that ran that server and answered missing URLs with 400 errors.
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "magicballoons-frontend",
+    "compatibility_date": "2026-09-01",
+    "assets": {
+        "directory": "./dist/magicballoons-frontend/browser",
+        // Missing URLs get the nearest 404.html (Spanish at /, English under
+        // /en/) with a real 404 status. See scripts/copy-404.mjs.
+        "not_found_handling": "404-page"
+    }
+}

@@ -1750,6 +1750,70 @@
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="notFound.title" datatype="html">
+        <source>Esta página se fue con el viento</source>
+        <target>This page drifted off with the wind</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.text" datatype="html">
+        <source>No encontramos lo que buscabas, pero tu vuelo sigue aquí.</source>
+        <target>We couldn't find what you were looking for, but your flight is still here.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.home" datatype="html">
+        <source>Ir al inicio</source>
+        <target>Go to the home page</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.packages" datatype="html">
+        <source>Ver vuelos</source>
+        <target>See flights</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.whatsapp" datatype="html">
+        <source>Escríbenos por WhatsApp</source>
+        <target>Message us on WhatsApp</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.whatsappMessage" datatype="html">
+        <source>Hola, busco información sobre los vuelos en globo.</source>
+        <target>Hi, I'm looking for information about the balloon flights.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.pageTitle" datatype="html">
+        <source>Página no encontrada | Magic Balloons</source>
+        <target>Page not found | Magic Balloons</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notFound.description" datatype="html">
+        <source>Esta página no existe. Vuelos en globo sobre Teotihuacán con Magic Balloons.</source>
+        <target>This page does not exist. Hot air balloon flights over Teotihuacan with Magic Balloons.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="policies.title" datatype="html">
         <source>Políticas de vuelo</source>
         <target>Flight policies</target>
