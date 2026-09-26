@@ -11,6 +11,25 @@
          i18n-alt="@@hero.posterAlt"
          fetchpriority="high">
 
+    <!-- Decorative, so it stays out of the prerendered HTML; fades in over the
+         poster once it is actually playing. [muted] as well as the attribute:
+         Angular's attribute alone doesn't set the property, and browsers only
+         autoplay a video that is muted. -->
+    @if (videoSrc())
+    {
+        <video class="hero__video"
+               [class.hero__video--playing]="videoPlaying()"
+               [src]="videoSrc()"
+               (playing)="videoPlaying.set(true)"
+               muted
+               [muted]="true"
+               autoplay
+               loop
+               playsinline
+               disablepictureinpicture
+               aria-hidden="true"></video>
+    }
+
     <div class="hero__scrim"></div>
 
     <div class="hero__content">

@@ -191,6 +191,17 @@ Each of these broke something or nearly did.
   canonical URL must not redirect.
 - **Rerun `scripts/responsive-images.py`** after adding a photo, or it gets no
   `srcset` (it still works, at full size).
+- **The hero video is added after `load`, never prerendered,** and only over
+  768px without reduced motion or data saver. The poster stays the LCP image
+  and phones never download an MP4. `hero-poster.webp` is a separate photo on
+  purpose: a frame from the footage looks like a paused video.
+- **Re-encoding the hero video** (from `source-media/videos/`, three 2.3 s
+  HEVC clips): slow each clip to 0.8x *before* the 0.4 s crossfades, so the
+  fades stay quick; strip audio; H.264 with `+faststart`, 1920 and 1280 wide.
+  ```bash
+  S="setpts=PTS/0.8,fps=30"
+  ffmpeg -i droneFootage1.MOV -i droneFootage2.MOV -i droneFootage3.MOV -filter_complex "[0:v]$S[c0];[1:v]$S[c1];[2:v]$S[c2];[c0][c1]xfade=transition=fade:duration=0.4:offset=2.53[a];[a][c2]xfade=transition=fade:duration=0.4:offset=5.0,format=yuv420p,scale=1920:-2[v]" -map "[v]" -an -c:v libx264 -preset slow -crf 26 -profile:v high -movflags +faststart hero-1920.mp4
+  ```
 - **The browser preview pane freezes when hidden:** scroll-driven animations,
   transitions and smooth scrolling stop advancing. Take a screenshot to force
   frames, and measure computed styles instead of trusting a blank frame.
@@ -305,8 +316,6 @@ font is the known next step if the simulated number matters.
 - Reviews and packages revealed one card after another as the section enters
   the screen (time-based, triggered by an IntersectionObserver), replacing the
   barely visible scroll-linked rise.
-- Hero video: 3 or 4 short drone clips joined into one silent MP4, poster
-  first, no video on mobile.
 - Optional: preload the Anton font (needs fixed file names).
 - GA4 / Google Tag Manager, with FareHarbor's own conversion tracking, once the
   ads agency asks. Their Google Business Profile matters more than any of it.
