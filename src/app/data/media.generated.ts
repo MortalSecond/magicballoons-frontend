@@ -23,6 +23,28 @@ export const MEDIA_WIDTHS: Record<string, number[]> = {
         1200,
         1600
     ],
+    "/media/event-banner.webp": [
+        480,
+        800,
+        1200,
+        1280
+    ],
+    "/media/event-couple.webp": [
+        480,
+        800,
+        1200,
+        1280
+    ],
+    "/media/event-drummer.webp": [
+        480,
+        800,
+        854
+    ],
+    "/media/event-poster.webp": [
+        480,
+        800,
+        1024
+    ],
     "/media/hero-poster.webp": [
         480,
         800,

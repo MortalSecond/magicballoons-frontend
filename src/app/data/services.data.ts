@@ -56,31 +56,36 @@ export const SERVICES: Service[] = [
         phone: '525635362245',
         message: $localize`:@@services.flights.message:Hola, me interesa un vuelo en globo.`
     },
-    // PLACEHOLDER: waiting on the client for this service's copy, photos and number.
+    // General on purpose: each event (Día de Muertos, Christmas...) is a one-off
+    // with its own program and price, so dates and prices live on WhatsApp, not
+    // here. An elevación is tethered; never call it a flight.
+    // PLACEHOLDER images: waiting on real event photos without baked-in text.
     {
-        id: 'service-two',
-        slug: 'servicio-dos',
-        name: $localize`:@@services.serviceTwo.name:Lorem ipsum`,
-        title: $localize`:@@services.serviceTwo.title:Lorem ipsum dolor sit amet`,
+        id: 'events',
+        slug: 'eventos-especiales',
+        name: $localize`:@@services.events.name:Eventos especiales`,
+        title: $localize`:@@services.events.title:El globopuerto, de noche`,
         description: [
-            $localize`:@@services.serviceTwo.description1:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-            $localize`:@@services.serviceTwo.description2:Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+            $localize`:@@services.events.description1:Varias veces al año, el llano donde despegan nuestros globos se convierte en escenario. En fechas como Día de Muertos o Navidad organizamos noches especiales con espectáculo prehispánico, danza, música en vivo y ceremonia de sahumación, a unos minutos de las pirámides.`,
+            $localize`:@@services.events.description2:Muchas de estas noches incluyen camping: te quedas a dormir en el globopuerto y despiertas con los globos inflándose al amanecer. También hacemos elevaciones, en las que el globo sube amarrado al suelo, sin despegar, para que vivas la experiencia desde la canasta.`,
+            $localize`:@@services.events.description3:Al reservar puedes rentar casas de campaña para 4 o 6 personas, cobijas y colchonetas, o traer las tuyas. En recepción hay café y pan de cortesía. Cada evento tiene su propio programa y precio: escríbenos por WhatsApp y te contamos del próximo.`
         ],
         highlights: [
-            { icon: '', label: $localize`:@@services.serviceTwo.highlight1:Lorem ipsum dolor` },
-            { icon: '', label: $localize`:@@services.serviceTwo.highlight2:Consectetur adipiscing` },
-            { icon: '', label: $localize`:@@services.serviceTwo.highlight3:Sed do eiusmod` }
+            { icon: '', label: $localize`:@@services.events.highlight1:Espectáculo prehispánico` },
+            { icon: '', label: $localize`:@@services.events.highlight2:Camping en el globopuerto` },
+            { icon: '', label: $localize`:@@services.events.highlight3:Elevaciones en globo` },
+            { icon: '', label: $localize`:@@services.events.highlight4:Eventos familiares` }
         ],
         gallery: [
-            { src: '/media/couple-dawn.webp', alt: $localize`:@@services.serviceTwo.alt1:Lorem ipsum` },
-            { src: '/media/hero-poster.webp', alt: $localize`:@@services.serviceTwo.alt2:Lorem ipsum` },
-            { src: '/media/couple-embrace.webp', alt: $localize`:@@services.serviceTwo.alt3:Lorem ipsum` },
-            { src: '/media/combi.webp', alt: $localize`:@@services.serviceTwo.alt4:Lorem ipsum` },
-            { src: '/media/woman-pyramids.webp', alt: $localize`:@@services.serviceTwo.alt5:Lorem ipsum` },
-            { src: '/media/cave.webp', alt: $localize`:@@services.serviceTwo.alt6:Lorem ipsum` }
+            { src: '/media/couple-dawn.webp', alt: $localize`:@@services.events.alt1:Pareja frente a los globos al amanecer` },
+            { src: '/media/hero-poster.webp', alt: $localize`:@@services.events.alt2:Globos sobre el valle de Teotihuacán` },
+            { src: '/media/couple-embrace.webp', alt: $localize`:@@services.events.alt3:Pareja abrazada en el globo` },
+            { src: '/media/combi.webp', alt: $localize`:@@services.events.alt4:Transporte de Magic Balloons` },
+            { src: '/media/woman-pyramids.webp', alt: $localize`:@@services.events.alt5:Pasajera observando las pirámides` },
+            { src: '/media/cave.webp', alt: $localize`:@@services.events.alt6:Desayuno en cueva` }
         ],
         phone: '525635362245',
-        message: $localize`:@@services.serviceTwo.message:Hola, me interesa lorem ipsum.`
+        message: $localize`:@@services.events.message:Hola, me interesa el próximo evento especial en el globopuerto.`
     },
     // PLACEHOLDER: waiting on the client for this service's copy, photos and number.
     {

@@ -1122,116 +1122,132 @@
           <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.name" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="services.serviceTwo.title" datatype="html">
-        <source>Lorem ipsum dolor sit amet</source>
-        <target>Lorem ipsum dolor sit amet</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="services.serviceTwo.description1" datatype="html">
-        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</source>
-        <target>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</target>
+      <trans-unit id="services.events.name" datatype="html">
+        <source>Eventos especiales</source>
+        <target>Special events</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.description2" datatype="html">
-        <source>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</source>
-        <target>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</target>
+      <trans-unit id="services.events.title" datatype="html">
+        <source>El globopuerto, de noche</source>
+        <target>The balloon port by night</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.highlight1" datatype="html">
-        <source>Lorem ipsum dolor</source>
-        <target>Lorem ipsum dolor</target>
+      <trans-unit id="services.events.description1" datatype="html">
+        <source>Varias veces al año, el llano donde despegan nuestros globos se convierte en escenario. En fechas como Día de Muertos o Navidad organizamos noches especiales con espectáculo prehispánico, danza, música en vivo y ceremonia de sahumación, a unos minutos de las pirámides.</source>
+        <target>A few times a year, the plain where our balloons take off becomes a stage. On dates like Día de Muertos or Christmas we host special nights with a pre-Hispanic show, dance, live music and a copal smoke ceremony, a few minutes from the pyramids.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/services.data.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.events.description2" datatype="html">
+        <source>Muchas de estas noches incluyen camping: te quedas a dormir en el globopuerto y despiertas con los globos inflándose al amanecer. También hacemos elevaciones, en las que el globo sube amarrado al suelo, sin despegar, para que vivas la experiencia desde la canasta.</source>
+        <target>Many of these nights include camping: you sleep at the balloon port and wake up to the balloons inflating at sunrise. We also run tethered rises, where the balloon goes up while still anchored to the ground, without taking off, so you can take in the view from the basket.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.highlight2" datatype="html">
-        <source>Consectetur adipiscing</source>
-        <target>Consectetur adipiscing</target>
+      <trans-unit id="services.events.description3" datatype="html">
+        <source>Al reservar puedes rentar casas de campaña para 4 o 6 personas, cobijas y colchonetas, o traer las tuyas. En recepción hay café y pan de cortesía. Cada evento tiene su propio programa y precio: escríbenos por WhatsApp y te contamos del próximo.</source>
+        <target>When you book you can rent tents for 4 or 6 people, blankets and sleeping mats, or bring your own. Coffee and bread are on the house at reception. Every event has its own program and price: message us on WhatsApp and we'll tell you about the next one.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.highlight3" datatype="html">
-        <source>Sed do eiusmod</source>
-        <target>Sed do eiusmod</target>
+      <trans-unit id="services.events.highlight1" datatype="html">
+        <source>Espectáculo prehispánico</source>
+        <target>Pre-Hispanic show</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.alt1" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
+      <trans-unit id="services.events.highlight2" datatype="html">
+        <source>Camping en el globopuerto</source>
+        <target>Camping at the balloon port</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.alt2" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
+      <trans-unit id="services.events.highlight3" datatype="html">
+        <source>Elevaciones en globo</source>
+        <target>Tethered balloon rises</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.alt3" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
+      <trans-unit id="services.events.highlight4" datatype="html">
+        <source>Eventos familiares</source>
+        <target>Family friendly</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.alt4" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="services.serviceTwo.alt5" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">79</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="services.serviceTwo.alt6" datatype="html">
-        <source>Lorem ipsum</source>
-        <target>Lorem ipsum</target>
+      <trans-unit id="services.events.alt1" datatype="html">
+        <source>Pareja frente a los globos al amanecer</source>
+        <target>Couple in front of the balloons at sunrise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="services.serviceTwo.message" datatype="html">
-        <source>Hola, me interesa lorem ipsum.</source>
-        <target>Hi, I'm interested in lorem ipsum.</target>
+      <trans-unit id="services.events.alt2" datatype="html">
+        <source>Globos sobre el valle de Teotihuacán</source>
+        <target>Balloons over the Teotihuacán valley</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/services.data.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.events.alt3" datatype="html">
+        <source>Pareja abrazada en el globo</source>
+        <target>Couple embracing in the balloon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/services.data.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.events.alt4" datatype="html">
+        <source>Transporte de Magic Balloons</source>
+        <target>Magic Balloons transport</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
           <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.events.alt5" datatype="html">
+        <source>Pasajera observando las pirámides</source>
+        <target>Passenger looking at the pyramids</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/services.data.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.events.alt6" datatype="html">
+        <source>Desayuno en cueva</source>
+        <target>Cave breakfast</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/services.data.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="services.events.message" datatype="html">
+        <source>Hola, me interesa el próximo evento especial en el globopuerto.</source>
+        <target>Hi, I'm interested in the next special event at the balloon port.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/services.data.ts</context>
+          <context context-type="linenumber">88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.name" datatype="html">
@@ -1239,7 +1255,7 @@
         <target>Dolor sit amet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.title" datatype="html">
@@ -1247,7 +1263,7 @@
         <target>Dolor sit amet consectetur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.description1" datatype="html">
@@ -1255,7 +1271,7 @@
         <target>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.description2" datatype="html">
@@ -1263,7 +1279,7 @@
         <target>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.highlight1" datatype="html">
@@ -1271,7 +1287,7 @@
         <target>Duis aute irure</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">96</context>
+          <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.highlight2" datatype="html">
@@ -1279,7 +1295,7 @@
         <target>Excepteur sint</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">97</context>
+          <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.highlight3" datatype="html">
@@ -1287,7 +1303,7 @@
         <target>Occaecat cupidatat</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.alt1" datatype="html">
@@ -1295,7 +1311,7 @@
         <target>Lorem ipsum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">101</context>
+          <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.alt2" datatype="html">
@@ -1303,7 +1319,7 @@
         <target>Lorem ipsum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">102</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.alt3" datatype="html">
@@ -1311,7 +1327,7 @@
         <target>Lorem ipsum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">103</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.alt4" datatype="html">
@@ -1319,7 +1335,7 @@
         <target>Lorem ipsum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">104</context>
+          <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.alt5" datatype="html">
@@ -1327,7 +1343,7 @@
         <target>Lorem ipsum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.alt6" datatype="html">
@@ -1335,7 +1351,7 @@
         <target>Lorem ipsum</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="services.serviceThree.message" datatype="html">
@@ -1343,7 +1359,7 @@
         <target>Hi, I'm interested in dolor sit amet.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/services.data.ts</context>
-          <context context-type="linenumber">109</context>
+          <context context-type="linenumber">114</context>
         </context-group>
       </trans-unit>
       <trans-unit id="navbar.flights" datatype="html">
@@ -1487,7 +1503,7 @@
         <target>Another question? Message us</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/faq-section/faq-section.html</context>
-          <context context-type="linenumber">7,10</context>
+          <context context-type="linenumber">7,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq.askMessage" datatype="html">
@@ -1511,7 +1527,7 @@
         <target>Teotihuacan, Mexico</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">17,19</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.titleFirst" datatype="html">
@@ -1519,7 +1535,7 @@
         <target>The magic</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">34,35</context>
+          <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.titleSecond" datatype="html">
@@ -1527,7 +1543,7 @@
         <target>of flight</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="linenumber">57,58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.book" datatype="html">
@@ -1535,7 +1551,7 @@
         <target>Book your flight</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">63,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.seePackages" datatype="html">
@@ -1543,7 +1559,7 @@
         <target>See packages</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">45,48</context>
+          <context context-type="linenumber">64,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofRating" datatype="html">
@@ -1551,7 +1567,7 @@
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ contact.rating.score }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> on TripAdvisor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">54,55</context>
+          <context context-type="linenumber">73,74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofReviews" datatype="html">
@@ -1559,7 +1575,7 @@
         <target>· <x id="INTERPOLATION" equiv-text="{{ contact.rating.count }}"/> reviews</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">55,56</context>
+          <context context-type="linenumber">74,75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofAfac" datatype="html">
@@ -1567,7 +1583,7 @@
         <target>Certified by the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>AFAC<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">58,59</context>
+          <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="hero.proofPassengers" datatype="html">
@@ -1575,7 +1591,7 @@
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>10,000+<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> passengers</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">59,60</context>
+          <context context-type="linenumber">78,79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="journey.eyebrow" datatype="html">
