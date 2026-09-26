@@ -2,7 +2,7 @@
 
 The state of the Magic Balloons México website: what it is, how it is built,
 the rules learned while building it, and what is still open. Read this before
-touching anything. Last updated 2026-09-24.
+touching anything. Last updated 2026-09-25.
 
 ---
 
@@ -33,7 +33,7 @@ knows how reception actually operates.
 | Piece | Choice |
 |---|---|
 | Framework | Angular 22.2: standalone, zoneless, OnPush by default, signals |
-| Rendering | Static prerendering (`outputMode: "static"`), 4 pages today |
+| Rendering | Static prerendering (`outputMode: "static"`): home, policies and 404, in both languages |
 | i18n | `@angular/localize`: Spanish (`es-MX`) at `/`, English at `/en/` |
 | Styles | Vanilla CSS, BEM, no framework, no token system |
 | Map | Leaflet 1.9.4 + OpenStreetMap tiles |
@@ -135,6 +135,10 @@ removed; do not reintroduce it.
   `MOBILE RESPONSIVE ADDITIONS` banner.
 - Buttons with text use `--redDark`: the brand `--red` fails contrast behind
   white text. `--red` is for dots, lines and accents.
+- Light sections add the global `atmosphere` class: dawn glow, sky haze and
+  faint SVG shapes (sun rings, a dashed flight path) behind the content. Their
+  own CSS sets no background. The Exclusivo card is a `--skyDeep` to `--sky`
+  gradient, with `--skyLight` for small text (4.8:1 at the lightest point).
 
 **TypeScript and templates**
 - Allman braces; no braces on a single-statement `if`.
@@ -259,8 +263,9 @@ font is the known next step if the simulated number matters.
 
 ## 9. Deployment and domain
 
-- **Hosting:** a Cloudflare Worker in Magic's Cloudflare account, built from
-  this repo (`master`) by Cloudflare's GitHub integration. Preview URL:
+- **Live at `magicballoonsmexico.com`** since 2026-09-25: a Cloudflare Worker
+  in Magic's Cloudflare account, built from this repo (`master`) by
+  Cloudflare's GitHub integration. Preview URL:
   `magicballoons-frontend.facturacionpublicidadag.workers.dev`.
 - **`wrangler.jsonc` must stay.** Without it, Cloudflare guessed a config that
   deployed Angular's SSR server, which answered every missing URL with a
@@ -273,7 +278,7 @@ font is the known next step if the simulated number matters.
   `/politicas/`.
 - **Registrar:** GoDaddy, in Magic's account. `magicballoonsmexico.com`
   expires 2027-09-19. It has no MX or TXT records (no email to protect).
-- **Domain steps:** add the site in Cloudflare (Free plan), then in GoDaddy
+- **Domain steps (done, kept for reference):** add the site in Cloudflare (Free plan), then in GoDaddy
   remove the domain lock / Domain Protection and switch the nameservers to
   Cloudflare's two. Once Cloudflare shows the zone as active, add
   `magicballoonsmexico.com` and `www.magicballoonsmexico.com` as Custom Domains
@@ -293,7 +298,6 @@ font is the known next step if the simulated number matters.
   lawyer; the current section is a summary.
 - Confirm: the AFAC 9:00 rule as worded, the "+10,000 pasajeros" claim, the
   history told at the toast, and publishing the fixed dollar rate.
-- The Cloudflare account and the nameserver change.
 
 **Ready to build**
 - A route per service (`/servicios/<slug>`); the data already has slugs. Needs

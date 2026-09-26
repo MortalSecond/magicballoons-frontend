@@ -26,6 +26,11 @@
     --sand: #ded2c3;
     --ink: #1b2136;
     --inkMuted: #4f5768;
+    --skyDeep: #0f3b73;
+    --sky: #2563a8;
+    --skyLight: #d6e6f7;
+    --dawn: rgba(255, 190, 150, 0.45);
+    --mist: rgba(160, 200, 240, 0.4);
 
     /* Hue shifts (to recolor black SVGs) */
     --toWhite: invert(100%);
@@ -192,6 +197,56 @@ p{
     background-color: rgba(255, 255, 255, 0.12);
 }
 
+/* Atmosphere: dawn light and faint sky shapes behind the light sections, so
+   they read as early morning rather than a blank page. The shapes sit behind
+   the content (isolation + z-index -1) and never take clicks. overflow-x: clip
+   hides what spills past the edges without breaking sticky children. */
+
+.atmosphere{
+    position: relative;
+    isolation: isolate;
+    overflow-x: clip;
+
+    background-color: var(--cream);
+    background-image:
+        radial-gradient(45rem 32rem at 0% 0%, var(--dawn), transparent 70%),
+        radial-gradient(50rem 36rem at 100% 100%, var(--mist), transparent 70%);
+}
+
+.atmosphere::before,
+.atmosphere::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    pointer-events: none;
+}
+
+/* Rising-sun rings, entering from the top right corner. */
+.atmosphere::before{
+    top: -14rem;
+    right: -14rem;
+
+    width: 40rem;
+    height: 40rem;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' fill='none' stroke='%23f29b6b' stroke-width='2'%3E%3Ccircle cx='400' cy='400' r='390' stroke-opacity='0.35'/%3E%3Ccircle cx='400' cy='400' r='300' stroke-opacity='0.28'/%3E%3Ccircle cx='400' cy='400' r='210' stroke-opacity='0.2'/%3E%3C/svg%3E");
+}
+
+/* A dashed flight path climbing to a small balloon, bottom left. */
+.atmosphere::after{
+    bottom: 3rem;
+    left: 2rem;
+
+    width: 30rem;
+    height: 17rem;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Cpath d='M10 330 C 160 320, 250 250, 330 170 S 470 60, 520 64' stroke='%236f9fd4' stroke-opacity='0.45' stroke-width='2' stroke-dasharray='2 12' stroke-linecap='round'/%3E%3Cellipse cx='548' cy='40' rx='26' ry='30' fill='%236f9fd4' fill-opacity='0.22'/%3E%3Cpath d='M536 68 L 542 84 M560 68 L 554 84' stroke='%236f9fd4' stroke-opacity='0.35' stroke-width='2'/%3E%3Crect x='540' y='84' width='16' height='10' rx='2' fill='%236f9fd4' fill-opacity='0.3'/%3E%3C/svg%3E");
+}
+
 /* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce){
@@ -213,6 +268,22 @@ p{
 @media (max-width: 768px){
     h1{
         font-size: 4rem;
+    }
+
+    .atmosphere::before{
+        top: -9rem;
+        right: -9rem;
+
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .atmosphere::after{
+        bottom: 1.5rem;
+        left: 0.5rem;
+
+        width: 16rem;
+        height: 9rem;
     }
 
     h2{

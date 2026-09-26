@@ -6,8 +6,6 @@
     gap: 3.5rem;
 
     padding: 8rem 5rem;
-
-    background-color: var(--cream);
 }
 
 .packages__titles{
@@ -57,12 +55,14 @@
     transform: translateY(-0.4rem);
 }
 
-/* The private flight stands apart by contrast, not by a new colour. */
+/* The private flight is the dawn sky: deep blue at the top, lighter toward
+   the horizon. Text stays at 4.8:1 or better even on the lightest blue. */
 .package--private{
     color: white;
 
-    border-color: var(--night);
-    background-color: var(--night);
+    border-color: var(--skyDeep);
+    background-color: var(--sky);
+    background-image: linear-gradient(to bottom, var(--skyDeep), var(--sky));
 }
 
 .package__image{
@@ -105,7 +105,7 @@
 }
 
 .package--private .package__tagline{
-    color: var(--sand);
+    color: var(--skyLight);
 }
 
 .package__price{
@@ -129,7 +129,7 @@
 }
 
 .package--private .package__unit{
-    color: var(--sand);
+    color: var(--skyLight);
 }
 
 /* Pushes the button to the bottom so every card's button lines up. */
@@ -144,7 +144,7 @@
 }
 
 .package--private .package__includes{
-    border-top-color: rgba(255, 255, 255, 0.15);
+    border-top-color: rgba(255, 255, 255, 0.2);
 }
 
 .includes__item{
