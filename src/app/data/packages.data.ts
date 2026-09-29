@@ -9,6 +9,8 @@ export interface FlightPackage
     id: string;
     name: string;
     tagline: string;
+    // The card's pitch in plain language; `includes` stays as the checklist.
+    description: string;
     price: number;
     priceUnit: string;
     includes: string[];
@@ -43,6 +45,7 @@ export const PACKAGES: FlightPackage[] = [
         id: 'esencial',
         name: $localize`:@@packages.esencial.name:Esencial`,
         tagline: $localize`:@@packages.esencial.tagline:Vuelo compartido`,
+        description: $localize`:@@packages.esencial.description:Vuela al amanecer en un vuelo compartido de unos 45 minutos sobre la Pirámide del Sol y la de la Luna. Al aterrizar brindamos con vino espumoso, recibes tu certificado de vuelo y cerramos la mañana con desayuno buffet, degustación de vinos y licores y una charla sobre la obsidiana y la historia de Teotihuacán.`,
         price: 2499,
         priceUnit: PER_PERSON,
         includes: [
@@ -63,6 +66,7 @@ export const PACKAGES: FlightPackage[] = [
         id: 'experiencia',
         name: $localize`:@@packages.experiencia.name:Experiencia`,
         tagline: $localize`:@@packages.experiencia.tagline:Con transporte desde CDMX`,
+        description: $localize`:@@packages.experiencia.description:Todo lo del vuelo Esencial, sin preocuparte por cómo llegar: te recogemos en la Ciudad de México y te llevamos de regreso. Después del vuelo y el desayuno buffet, entras a la zona arqueológica para recorrer a pie las pirámides que viste desde el cielo.`,
         price: 2899,
         priceUnit: PER_PERSON,
         includes: [
@@ -85,6 +89,7 @@ export const PACKAGES: FlightPackage[] = [
         id: 'premium',
         name: $localize`:@@packages.premium.name:Premium`,
         tagline: $localize`:@@packages.premium.tagline:Con desayuno en cueva`,
+        description: $localize`:@@packages.premium.description:Vuelo compartido con transporte redondo desde CDMX y entrada a la zona arqueológica, y en lugar del buffet, un desayuno dentro de una cueva. El brindis, la degustación de vinos y licores y tu certificado de vuelo también van incluidos.`,
         price: 3200,
         priceUnit: PER_PERSON,
         includes: [
@@ -107,6 +112,7 @@ export const PACKAGES: FlightPackage[] = [
         id: 'exclusivo',
         name: $localize`:@@packages.exclusivo.name:Exclusivo`,
         tagline: $localize`:@@packages.exclusivo.tagline:Vuelo privado para dos`,
+        description: $localize`:@@packages.exclusivo.description:Una canasta solo para ustedes dos y el piloto, perfecta para una pedida de mano o un aniversario. Vuelo privado al amanecer, brindis con vino espumoso, certificado de vuelo y desayuno buffet con degustación de vinos y licores.`,
         price: 8990,
         priceUnit: PER_COUPLE,
         includes: [

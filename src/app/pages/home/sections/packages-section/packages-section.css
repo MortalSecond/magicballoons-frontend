@@ -132,19 +132,60 @@
     color: var(--skyLight);
 }
 
-/* Pushes the button to the bottom so every card's button lines up. */
-.package__includes{
-    display: flex;
-    flex-direction: column;
+/* Pushes the checklist and button to the bottom so every card's button lines up. */
+.package__description{
     flex: 1;
-    gap: 0.6rem;
 
-    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.package__includes{
+    padding-top: 1rem;
     border-top: solid 1px rgba(11, 14, 26, 0.08);
 }
 
 .package--private .package__includes{
     border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.includes__summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.includes__summary::-webkit-details-marker{
+    display: none;
+}
+
+.includes__summary::after{
+    content: '+';
+
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    transition: transform 0.2s;
+}
+
+.package__includes[open] .includes__summary::after{
+    transform: rotate(45deg);
+}
+
+.includes__list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    padding-top: 1rem;
 }
 
 .includes__item{

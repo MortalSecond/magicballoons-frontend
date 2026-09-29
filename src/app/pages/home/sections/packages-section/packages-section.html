@@ -28,12 +28,20 @@
                         <span class="package__unit">MXN {{ item.priceUnit }}</span>
                     </p>
 
-                    <ul class="package__includes">
-                        @for (line of item.includes; track line)
-                        {
-                            <li class="includes__item">{{ line }}</li>
-                        }
-                    </ul>
+                    <p class="package__description">{{ item.description }}</p>
+
+                    <!-- Native <details>: the checklist stays in the prerendered
+                         HTML for search while the card leads with prose. -->
+                    <details class="package__includes">
+                        <summary class="includes__summary" i18n="@@packages.includes">Qué incluye</summary>
+
+                        <ul class="includes__list">
+                            @for (line of item.includes; track line)
+                            {
+                                <li class="includes__item">{{ line }}</li>
+                            }
+                        </ul>
+                    </details>
 
                     <a class="button package__button" [href]="item.url" i18n="@@packages.book">Reservar</a>
                 </div>
