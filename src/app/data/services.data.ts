@@ -116,9 +116,5 @@ export const SERVICES: Service[] = [
 ];
 
 
-// === HELPERS ===
-
-export function whatsappUrl(phone: string, message: string): string
-{
-    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-}
+// Defined in contact.data.ts; re-exported so existing imports keep working.
+export { whatsappUrl } from './contact.data';

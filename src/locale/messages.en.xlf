@@ -10,12 +10,20 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="contact.bookingMessage" datatype="html">
+        <source>Hola, quiero reservar un vuelo en globo.</source>
+        <target>Hi, I'd like to book a balloon flight.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/contact.data.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="location.balloonport" datatype="html">
         <source>Globopuerto</source>
         <target>Launch site</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/contact.data.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="location.office" datatype="html">
@@ -23,7 +31,7 @@
         <target>Office</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/contact.data.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq.group.booking" datatype="html">
@@ -792,6 +800,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/packages.data.ts</context>
           <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="packages.bookingMessage" datatype="html">
+        <source>Hola, quiero reservar el paquete <x id="name" equiv-text="item.name"/>.</source>
+        <target>Hi, I'd like to book the <x id="name" equiv-text="item.name"/> package.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/packages.data.ts</context>
+          <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="policies.updated" datatype="html">
@@ -1623,7 +1639,7 @@
         <target><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>10,000+<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> passengers</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/hero-section/hero-section.html</context>
-          <context context-type="linenumber">78,79</context>
+          <context context-type="linenumber">78,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="journey.eyebrow" datatype="html">
@@ -1723,7 +1739,7 @@
         <target>Book</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/sections/packages-section/packages-section.html</context>
-          <context context-type="linenumber">46,47</context>
+          <context context-type="linenumber">46,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="reviews.eyebrow" datatype="html">

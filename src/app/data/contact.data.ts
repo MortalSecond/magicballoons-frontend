@@ -1,14 +1,19 @@
 // Every outward-facing link and number in one place.
 
 // Translated like any other string, so each language build sends visitors to
-// FareHarbor's checkout in that language.
+// FareHarbor's checkout in that language. Unused while FareHarbor is down.
 export const FAREHARBOR_LANGUAGE = $localize`:@@site.fareharborLanguage:es`;
+
+const WHATSAPP = '525635362245';
 
 export const CONTACT = {
     phone: '+52 56 3536 2245',
     phoneHref: 'tel:+525635362245',
-    whatsapp: '525635362245',
-    booking: `https://fareharbor.com/embeds/book/magicballoonsmexico/?full-items=yes&language=${FAREHARBOR_LANGUAGE}`,
+    whatsapp: WHATSAPP,
+    // TEMPORARY (2026-10): FareHarbor's account went dark, so every "Reservar"
+    // goes to sales on WhatsApp. To restore, put this line back:
+    // booking: `https://fareharbor.com/embeds/book/magicballoonsmexico/?full-items=yes&language=${FAREHARBOR_LANGUAGE}`,
+    booking: whatsappUrl(WHATSAPP, $localize`:@@contact.bookingMessage:Hola, quiero reservar un vuelo en globo.`),
     reviews: 'https://www.tripadvisor.com.mx/Attraction_Review-g14989463-d26454966-Reviews-Magic_Balloons_Mexico.html',
     // From the booking box on the TripAdvisor page. The page header counts
     // differently (155), so quote these two together or not at all.
@@ -41,3 +46,11 @@ export const CONTACT = {
         youtube: 'https://www.youtube.com/@MagicBallonsMexico'
     }
 } as const;
+
+
+// === HELPERS ===
+
+export function whatsappUrl(phone: string, message: string): string
+{
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}

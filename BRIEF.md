@@ -213,7 +213,13 @@ Each of these broke something or nearly did.
 Operations are the source of truth, not the old written policies, which were
 out of date. All figures below live in `policy.data.ts` or `contact.data.ts`.
 
-- **Booking:** FareHarbor online, or WhatsApp with a salesperson.
+- **Booking:** WhatsApp with a salesperson, **for now everywhere.** FareHarbor's
+  account went dark in October 2026 (the company page "can't be found", fees
+  were paid, cause unknown). `CONTACT.booking` and `bookingUrl()` point at
+  WhatsApp, the package link names the package, and the FareHarbor URLs are
+  kept (`fareharborUrl`, a commented line) to swap back. Replacement options
+  under discussion: reactivate, Bókun (Tripadvisor-owned), or website requests
+  feeding the CRM's planned *solicitudes*.
 - **Deposit:** $500 MXN per passenger at booking, for every package. The rest
   is paid at reception on flight day.
 - **Payment at reception:** cash, transfer, card (+5%, the terminal's fee).

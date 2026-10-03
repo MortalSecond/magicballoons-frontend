@@ -1,4 +1,4 @@
-import { FAREHARBOR_LANGUAGE } from './contact.data';
+import { CONTACT, FAREHARBOR_LANGUAGE, whatsappUrl } from './contact.data';
 
 // Flight packages. Prices must match FareHarbor: the customer pays what
 // FareHarbor charges, not what this file says. `bookingId` is the FareHarbor
@@ -134,7 +134,14 @@ export const PACKAGES: FlightPackage[] = [
 
 // === HELPERS ===
 
+// TEMPORARY (2026-10): WhatsApp while FareHarbor is down; the message names
+// the package so sales knows what was clicked. fareharborUrl is kept to swap back.
 export function bookingUrl(item: FlightPackage): string
+{
+    return whatsappUrl(CONTACT.whatsapp, $localize`:@@packages.bookingMessage:Hola, quiero reservar el paquete ${item.name}:name:.`);
+}
+
+export function fareharborUrl(item: FlightPackage): string
 {
     return `https://fareharbor.com/embeds/book/magicballoonsmexico/items/${item.bookingId}`
         + `/?full-items=yes&flow=${FLOW_ID}&language=${FAREHARBOR_LANGUAGE}`;

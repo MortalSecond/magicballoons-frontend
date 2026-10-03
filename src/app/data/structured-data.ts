@@ -1,5 +1,5 @@
 import { CONTACT } from './contact.data';
-import { PACKAGES, bookingUrl } from './packages.data';
+import { PACKAGES } from './packages.data';
 import { SITE_URL } from './site.data';
 
 // schema.org description of the business for search engines, built from the
@@ -43,7 +43,8 @@ export function businessData(description: string, pageUrl: string): object
             description: item.tagline,
             price: item.price,
             priceCurrency: 'MXN',
-            url: bookingUrl(item)
+            // The page itself, not the checkout: stays valid whatever books it.
+            url: `${pageUrl}#vuelos`
         }))
     };
 }
