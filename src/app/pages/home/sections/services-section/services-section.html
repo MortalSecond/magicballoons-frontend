@@ -34,14 +34,9 @@
                  [attr.inert]="index === active() ? null : ''"
                  [class.service--active]="index === active()">
 
-                <div class="service__gallery">
-                    @for (image of service.gallery; track $index)
-                    {
-                        <button class="gallery__item" type="button" (click)="expand(image)">
-                            <img class="gallery__image" [src]="image.src" [attr.srcset]="image.srcset" sizes="(max-width: 1000px) 33vw, 13rem" [alt]="image.alt" width="400" height="400" loading="lazy">
-                        </button>
-                    }
-                </div>
+                <button class="service__media" type="button" (click)="expand(service.image)">
+                    <img class="media__image" [src]="service.image.src" [attr.srcset]="service.image.srcset" sizes="(max-width: 1000px) 100vw, 40rem" [alt]="service.image.alt" width="800" height="600" loading="lazy">
+                </button>
 
                 <div class="service__info">
                     <h3 class="service__title">{{ service.title }}</h3>

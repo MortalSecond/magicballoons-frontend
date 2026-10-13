@@ -83,7 +83,7 @@ src/
       contact.data.ts         phones, links, rating, both locations
       policy.data.ts          operational figures (deposit, fees, weights...)
       packages.data.ts        the four packages, FareHarbor ids
-      services.data.ts        services carousel (two are lorem placeholders)
+      services.data.ts        services carousel: flights, events, photos and video; one image each
       journey.data.ts         the ten-step flight day
       reviews.data.ts         TripAdvisor quotes, per language, never translated
       faq.data.ts             FAQ, 18 questions in 4 groups
@@ -309,7 +309,7 @@ font is the known next step if the simulated number matters.
 ## 10. Open items
 
 **Waiting on the client**
-- Copy, photos and a WhatsApp number for the two lorem services.
+- Real event photos without baked-in text (the events slide borrows `couple-dawn`).
 - Real photos to replace the ChatGPT-edited ones.
 - A legally complete privacy notice (*aviso de privacidad*, LFPDPPP) from their
   lawyer; the current section is a summary.

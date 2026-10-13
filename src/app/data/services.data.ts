@@ -24,7 +24,9 @@ export interface Service
     title: string;
     description: string[];
     highlights: ServiceHighlight[];
-    gallery: ServiceImage[];
+    // One image per slide: there are too few real photos to fill a grid
+    // without repeating them across services.
+    image: ServiceImage;
     phone: string;
     message: string;
 }
@@ -45,14 +47,7 @@ export const SERVICES: Service[] = [
             { icon: '/icons/van.svg', label: $localize`:@@services.flights.highlight3:Transporte desde CDMX` },
             { icon: '/icons/award.svg', label: $localize`:@@services.flights.highlight4:Certificado de vuelo` }
         ],
-        gallery: [
-            { src: '/media/hero-poster.webp', alt: $localize`:@@services.flights.alt1:Globos sobre el valle de Teotihuacán` },
-            { src: '/media/couple-embrace.webp', alt: $localize`:@@services.flights.alt2:Pareja abrazada durante el vuelo` },
-            { src: '/media/woman-pyramids.webp', alt: $localize`:@@services.flights.alt3:Pasajera observando las pirámides desde el globo` },
-            { src: '/media/couple-dawn.webp', alt: $localize`:@@services.flights.alt4:Pareja frente a los globos al amanecer` },
-            { src: '/media/cave.webp', alt: $localize`:@@services.flights.alt5:Desayuno en cueva` },
-            { src: '/media/combi.webp', alt: $localize`:@@services.flights.alt6:Transporte de Magic Balloons desde CDMX` }
-        ],
+        image: { src: '/media/woman-pyramids.webp', alt: $localize`:@@services.flights.alt3:Pasajera observando las pirámides desde el globo` },
         phone: '525635362245',
         message: $localize`:@@services.flights.message:Hola, me interesa un vuelo en globo.`
     },
@@ -76,42 +71,32 @@ export const SERVICES: Service[] = [
             { icon: '', label: $localize`:@@services.events.highlight3:Elevaciones en globo` },
             { icon: '', label: $localize`:@@services.events.highlight4:Eventos familiares` }
         ],
-        gallery: [
-            { src: '/media/couple-dawn.webp', alt: $localize`:@@services.events.alt1:Pareja frente a los globos al amanecer` },
-            { src: '/media/hero-poster.webp', alt: $localize`:@@services.events.alt2:Globos sobre el valle de Teotihuacán` },
-            { src: '/media/couple-embrace.webp', alt: $localize`:@@services.events.alt3:Pareja abrazada en el globo` },
-            { src: '/media/combi.webp', alt: $localize`:@@services.events.alt4:Transporte de Magic Balloons` },
-            { src: '/media/woman-pyramids.webp', alt: $localize`:@@services.events.alt5:Pasajera observando las pirámides` },
-            { src: '/media/cave.webp', alt: $localize`:@@services.events.alt6:Desayuno en cueva` }
-        ],
+        // PLACEHOLDER image: waiting on real event photos without baked-in text.
+        image: { src: '/media/couple-dawn.webp', alt: $localize`:@@services.events.alt1:Pareja frente a los globos al amanecer` },
         phone: '525635362245',
         message: $localize`:@@services.events.message:Hola, me interesa el próximo evento especial en el globopuerto.`
     },
-    // PLACEHOLDER: waiting on the client for this service's copy, photos and number.
+    // A hook, not a price list: photos and video are sold separately and the
+    // packages vary, so the details are left to sales.
     {
-        id: 'service-three',
-        slug: 'servicio-tres',
-        name: $localize`:@@services.serviceThree.name:Dolor sit amet`,
-        title: $localize`:@@services.serviceThree.title:Dolor sit amet consectetur`,
+        id: 'photography',
+        slug: 'fotografia-y-video',
+        name: $localize`:@@services.photography.name:Fotografía y video`,
+        title: $localize`:@@services.photography.title:Tu vuelo, en fotos y video`,
         description: [
-            $localize`:@@services.serviceThree.description1:Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
-            $localize`:@@services.serviceThree.description2:Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
+            $localize`:@@services.photography.description1:Nuestros fotógrafos acompañan tu mañana con cámaras profesionales, desde las primeras fotos en el globopuerto hasta el retrato en la canasta, segundos antes de despegar. Hay accesorios como alas de ángel para quien quiera una foto distinta.`,
+            $localize`:@@services.photography.description2:Desde el aire, nuestro dron graba el despegue y el vuelo sobre las pirámides. Puedes llevarte las fotos y los clips tal cual, o editados en un video de tu experiencia.`,
+            $localize`:@@services.photography.description3:Antes de irte te entregamos fotos impresas al momento, para que te lleves el recuerdo en la mano. Y si celebras una pedida de mano, un aniversario o un cumpleaños, preparamos letreros y mantas para que quede en la foto.`
         ],
         highlights: [
-            { icon: '', label: $localize`:@@services.serviceThree.highlight1:Duis aute irure` },
-            { icon: '', label: $localize`:@@services.serviceThree.highlight2:Excepteur sint` },
-            { icon: '', label: $localize`:@@services.serviceThree.highlight3:Occaecat cupidatat` }
+            { icon: '', label: $localize`:@@services.photography.highlight1:Cámaras profesionales` },
+            { icon: '', label: $localize`:@@services.photography.highlight2:Video con dron` },
+            { icon: '', label: $localize`:@@services.photography.highlight3:Fotos impresas al momento` },
+            { icon: '', label: $localize`:@@services.photography.highlight4:Fotos y video editados o en crudo` }
         ],
-        gallery: [
-            { src: '/media/woman-pyramids.webp', alt: $localize`:@@services.serviceThree.alt1:Lorem ipsum` },
-            { src: '/media/cave.webp', alt: $localize`:@@services.serviceThree.alt2:Lorem ipsum` },
-            { src: '/media/couple-dawn.webp', alt: $localize`:@@services.serviceThree.alt3:Lorem ipsum` },
-            { src: '/media/hero-poster.webp', alt: $localize`:@@services.serviceThree.alt4:Lorem ipsum` },
-            { src: '/media/combi.webp', alt: $localize`:@@services.serviceThree.alt5:Lorem ipsum` },
-            { src: '/media/couple-embrace.webp', alt: $localize`:@@services.serviceThree.alt6:Lorem ipsum` }
-        ],
+        image: { src: '/media/couple-embrace.webp', alt: $localize`:@@services.photography.alt:Pareja abrazada en la canasta del globo` },
         phone: '525635362245',
-        message: $localize`:@@services.serviceThree.message:Hola, me interesa dolor sit amet.`
+        message: $localize`:@@services.photography.message:Hola, me interesan las fotos y el video de mi vuelo.`
     }
 ];
 

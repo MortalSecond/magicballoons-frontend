@@ -14,7 +14,7 @@ export class ServicesSection
     protected readonly services = SERVICES.map(service => ({
         ...service,
         url: whatsappUrl(service.phone, service.message),
-        gallery: service.gallery.map(image => ({ ...image, srcset: srcset(image.src) }))
+        image: { ...service.image, srcset: srcset(service.image.src) }
     }));
 
     // === STATE ===

@@ -108,36 +108,30 @@
     transition: opacity 0.5s, translate 0.5s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s;
 }
 
-/* Gallery */
+/* Media */
 
-.service__gallery{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-}
-
-.gallery__item{
+.service__media{
     padding: 0;
     overflow: hidden;
     border: none;
-    border-radius: 0.75rem;
+    border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.06);
 
     cursor: zoom-in;
 }
 
-.gallery__image{
+.media__image{
     width: 100%;
     height: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 3;
 
     object-fit: cover;
 
     transition: scale 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.gallery__item:hover .gallery__image{
-    scale: 1.06;
+.service__media:hover .media__image{
+    scale: 1.04;
 }
 
 /* Info */
